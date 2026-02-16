@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Idrak Security - Industry-specific cybersecurity solutions for Financial Services, Energy, Retail, Manufacturing, and Public Sector.">
+  <title>Industries | Idrak Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v5-style.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <style>
+    .industry-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 60px;
+      padding: 0 24px;
+    }
+    .industry-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 24px 20px;
+      border: 1px solid var(--dark-blue);
+      border-radius: 6px;
+      background: var(--white);
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: var(--transition-fast);
+      min-height: 120px;
+      flex: 0 1 calc(33.333% - 20px);
+      max-width: 320px;
+    }
+    .industry-nav-icon {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .industry-nav-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .industry-nav-label {
+      line-height: 1.2;
+    }
+    .industry-nav-item:hover,
+    .industry-nav-item.active {
+      background: var(--primary-cyan-100);
+      border-color: var(--primary-cyan);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .industry-detail {
+      background: var(--white);
+      border: 1px solid var(--dark-blue);
+      border-radius: 4px;
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+    .industry-detail-header {
+      background: var(--primary-cyan);
+      padding: 24px;
+    }
+    .industry-detail-title {
+      color: var(--dark-blue);
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .industry-detail-subtitle {
+      color: var(--dark-blue);
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .detail-tabs {
+      display: flex;
+      background: var(--dark-blue);
+      padding: 0 24px;
+    }
+    .detail-tab {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      background: #E0E0E0;
+      border: none;
+      flex: 1;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-transform: uppercase;
+    }
+    .detail-tab:hover,
+    .detail-tab.active {
+      color: white;
+      background: #1A365D;
+    }
+    
+    .detail-tab-content {
+      padding: 24px;
+      display: none;
+    }
+    .detail-tab-content.active {
+      display: block;
+    }
+    .detail-tab-content h3 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: var(--dark-blue);
+    }
+    
+    .tab-content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .tab-content-card {
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      padding: 20px;
+      background: var(--white);
+    }
+    .tab-content-card h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .tab-content-card p {
+      font-size: 14px;
+      color: var(--grey-dark);
+      line-height: 1.5;
+    }
+    
+    .case-study-content {
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      padding: 20px;
+      background: var(--white);
+    }
+    .case-study-header {
+      margin-bottom: 16px;
+    }
+    .case-study-header h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
+    }
+    .case-study-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--primary-cyan-100);
+      color: var(--dark-blue);
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 12px;
+    }
+    .case-study-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .stat {
+      flex: 1;
+      text-align: center;
+      padding: 16px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+    }
+    .stat-number {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-cyan);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--grey-dark);
+    }
+    
+    .cta-box {
+      background: var(--primary-cyan-100);
+      padding: 40px;
+      text-align: center;
+      border-radius: 4px;
+      margin-top: 60px;
+    }
+    .cta-box h3 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cta-box p {
+      font-size: 16px;
+      color: var(--grey-dark);
+      margin-bottom: 24px;
+    }
+    
+    @media (max-width: 1024px) {
+      .industry-nav-item {
+        flex: 0 1 calc(50% - 20px);
+        max-width: 360px;
+      }
+      .tab-content-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-study-stats {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 768px) {
+      .industry-nav-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .detail-tabs {
+        flex-direction: column;
+        padding: 0;
+      }
+      .detail-tab {
+        text-align: left;
+        padding: 12px 24px;
+      }
+    }
+    @media print {
+      .industry-nav {
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .industry-nav-item {
+        flex: 0 1 calc(33.333% - 16px);
+        max-width: 280px;
+        box-shadow: none;
+        transform: none;
+      }
+      .tab-content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png" alt="Idrak Security" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link active">Industries</a>
+        <a href="contacts.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang-selector"><span>Eng</span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22M12 2C9.5 4.5 8 8 8 12C8 16 9.5 19.5 12 22M2 12H22" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <a href="client-area.html" class="user-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#1E293B" stroke-width="1.5"/><path d="M20 19C20 16.2 16.4 14 12 14C7.6 14 4 16.2 4 19" stroke="#1E293B" stroke-width="1.5"/></svg></a>
+      </div>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-line"></div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="page-header-pattern"></div>
+      <div class="page-header-content">
+        <h1 class="h2">Industries Served</h1>
+        <p class="subtitle">Customized cybersecurity solutions for every sector.</p>
+        <p class="description">Each industry faces unique threats and compliance requirements. We leverage sector-specific expertise to deliver targeted security programs that address your most critical challenges.</p>
+      </div>
+    </section>
+
+    <div class="industry-nav">
+      <a href="#financial" class="industry-nav-item active">
+        <div class="industry-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2V4M12 20V22M4 12H2M22 12H20M18.364 5.636L16.95 7.05M7.05 16.95L5.636 18.364M18.364 18.364L16.95 16.95M7.05 7.05L5.636 5.636" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <span class="industry-nav-label">Financial Services Security</span>
+      </a>
+      <a href="#energy" class="industry-nav-item">
+        <div class="industry-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="industry-nav-label">Energy & Utilities Security</span>
+      </a>
+      <a href="#retail" class="industry-nav-item">
+        <div class="industry-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="3.27 6.96 12 12.01 20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="22.08" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="industry-nav-label">Retail & e-Commerce Security</span>
+      </a>
+      <a href="#manufacturing" class="industry-nav-item">
+        <div class="industry-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <span class="industry-nav-label">Manufacturing & Industry 4.0 Security</span>
+      </a>
+      <a href="#public" class="industry-nav-item">
+        <div class="industry-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="industry-nav-label">Public Sector & Government Security</span>
+      </a>
+    </div>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 0 24px 80px;">
+      
+      <!-- Financial Services -->
+      <div id="financial" class="industry-detail">
+        <div class="industry-detail-header" style="background-color: #00BFFF; color: white; padding: 20px; display: flex; align-items: center; gap: 15px;">
+          <div style="font-size: 30px;">🏦</div>
+          <div>
+            <h2 class="industry-detail-title" style="margin: 0; font-size: 24px;">FINANCIAL SERVICES SECURITY</h2>
+            <p class="industry-detail-subtitle" style="margin: 5px 0 0 0; font-size: 14px;">Protect banks, insurance companies, and fintech firms from sophisticated cyber threats, ensuring data integrity, availability, and regulatory compliance.</p>
+          </div>
+        </div>
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="threats">Threats</button>
+          <button class="detail-tab" data-tab="solutions">Solutions</button>
+          <button class="detail-tab" data-tab="deliverables">Deliverables</button>
+          <button class="detail-tab" data-tab="casestudy">Case Study</button>
+        </div>
+        
+        <!-- Threats Content -->
+        <div class="detail-tab-content active" data-content="threats">
+          <h3 style="text-transform: uppercase;">Sector-Specific Threats</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #E53935;">👤</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Insider Threats</h4>
+                <p>Authorized users misusing credentials to manipulate financial records or exfiltrate sensitive data.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #1E88E5;">🎯</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Advanced Persistent Threats (APTs)</h4>
+                <p>Nation-state or organized cybercriminal groups targeting transaction systems and customer databases.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #43A047;">🎭</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Fraud & Social Engineering</h4>
+                <p>Business Email Compromise (BEC) targeting finance executives to authorize fraudulent wire transfers.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #FB8C00;">🌊</div>
+              <div>
+                <h4 style="text-transform: uppercase;">DDoS & Disruption</h4>
+                <p>Large-scale attacks aimed at crippling online banking platforms during high-traffic periods.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Solutions Content -->
+        <div class="detail-tab-content" data-content="solutions">
+          <h3>Our Security Solutions</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>Penetration Testing</h4>
+              <p>Comprehensive security assessments of banking applications and infrastructure.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Compliance Assessment</h4>
+              <p>PCI-DSS, GDPR, and financial regulation compliance audits.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Incident Response</h4>
+              <p>24/7 rapid response team for financial security incidents.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Security Training</h4>
+              <p>Staff awareness programs focused on financial fraud prevention.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Deliverables Content -->
+        <div class="detail-tab-content" data-content="deliverables">
+          <h3>What You Receive</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>Executive Summary</h4>
+              <p>High-level findings report for board and C-level stakeholders.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Technical Report</h4>
+              <p>Detailed vulnerability documentation with CVSS scores.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Remediation Roadmap</h4>
+              <p>Prioritized action plan with timeline and resource estimates.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Compliance Certificate</h4>
+              <p>Official attestation letter for regulatory requirements.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Case Study Content -->
+        <div class="detail-tab-content" data-content="casestudy">
+          <h3>Success Story</h3>
+          <div class="case-study-content">
+            <div class="case-study-header">
+              <h4>Major European Bank - Security Transformation</h4>
+              <span class="case-study-tag">Financial Services</span>
+            </div>
+            <p>A leading European financial institution engaged Idrak Security to conduct comprehensive security assessments of their digital banking platform serving over 2 million customers.</p>
+            <div class="case-study-stats">
+              <div class="stat">
+                <span class="stat-number">47</span>
+                <span class="stat-label">Critical vulnerabilities identified</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Compliance achieved</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">60%</span>
+                <span class="stat-label">Risk reduction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Energy & Utilities -->
+      <div id="energy" class="industry-detail">
+        <div class="industry-detail-header" style="background-color: #00BFFF; color: white; padding: 20px; display: flex; align-items: center; gap: 15px;">
+          <div style="font-size: 30px;">⚡</div>
+          <div>
+            <h2 class="industry-detail-title" style="margin: 0; font-size: 24px;">ENERGY & UTILITIES SECURITY</h2>
+            <p class="industry-detail-subtitle" style="margin: 5px 0 0 0; font-size: 14px;">Secure critical infrastructure, industrial control systems (ICS), and supervisory control and data acquisition (SCADA) environments to ensure grid reliability and regulatory compliance.</p>
+          </div>
+        </div>
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="threats">Threats</button>
+          <button class="detail-tab" data-tab="solutions">Solutions</button>
+          <button class="detail-tab" data-tab="deliverables">Deliverables</button>
+          <button class="detail-tab" data-tab="casestudy">Case Study</button>
+        </div>
+        <div class="detail-tab-content active" data-content="threats">
+          <h3 style="text-transform: uppercase;">Sector-Specific Threats</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #E53935;">🔌</div>
+              <div>
+                <h4 style="text-transform: uppercase;">OT/ICS Attacks</h4>
+                <p>Targeted malware (e.g., BlackEnergy, Triton) aiming to disrupt SCADA operations.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #1E88E5;">🔗</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Supply Chain Vulnerabilities</h4>
+                <p>Exploitation of third-party vendors managing control systems or providing software updates.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #43A047;">🔒</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Ransomware & Wiper Attacks</h4>
+                <p>Malware designed to encrypt or destroy operational data, causing service outages.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #FB8C00;">👤</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Insider Sabotage</h4>
+                <p>Disgruntled employees or contractors with physical or remote access to control systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="solutions">
+          <h3>Core Security Solutions</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>ICS/SCADA Penetration Testing</h4>
+              <p>Controlled testing of OT environments to validate segmentation and identify exploitable weaknesses.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Network Segmentation & Zero Trust</h4>
+              <p>Isolate critical assets and enforce least-privilege access for OT and IT networks.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Continuous Monitoring</h4>
+              <p>24/7 detection for abnormal OT traffic and early-warning indicators of compromise.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Regulatory Compliance</h4>
+              <p>NIS2, IEC 62443, and critical infrastructure security governance support.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="deliverables">
+          <h3>Deliverables & Benefits</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>ICS/SCADA Assessment Report</h4>
+              <p>Risk-ranked findings with remediation actions for critical control environments.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Segmentation Design Blueprint</h4>
+              <p>Target architecture for secure OT/IT boundaries and access controls.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Incident Response Playbooks</h4>
+              <p>OT-specific response steps for containment, recovery, and operational continuity.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Regulatory Audit Support</h4>
+              <p>Documentation packages for auditors and executive stakeholders.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="casestudy">
+          <h3>Illustrative Case Study</h3>
+          <div class="case-study-content">
+            <div class="case-study-header">
+              <h4>Regional Energy Provider - OT Resilience</h4>
+              <span class="case-study-tag">Energy & Utilities</span>
+            </div>
+            <p>An energy utility partnered with Idrak Security to assess SCADA segmentation, harden remote access, and deploy continuous monitoring across substations.</p>
+            <div class="case-study-stats">
+              <div class="stat">
+                <span class="stat-number">70%</span>
+                <span class="stat-label">Incident reduction</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">45</span>
+                <span class="stat-label">Critical risks remediated</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Monitoring coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Retail -->
+      <div id="retail" class="industry-detail">
+        <div class="industry-detail-header" style="background-color: #00BFFF; color: white; padding: 20px; display: flex; align-items: center; gap: 15px;">
+          <div style="font-size: 30px;">🛒</div>
+          <div>
+            <h2 class="industry-detail-title" style="margin: 0; font-size: 24px;">RETAIL & E-COMMERCE SECURITY</h2>
+            <p class="industry-detail-subtitle" style="margin: 5px 0 0 0; font-size: 14px;">Safeguard customer data, ensure transaction integrity, and maintain trust in omnichannel retail and e-commerce platforms.</p>
+          </div>
+        </div>
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="threats">Threats</button>
+          <button class="detail-tab" data-tab="solutions">Solutions</button>
+          <button class="detail-tab" data-tab="deliverables">Deliverables</button>
+          <button class="detail-tab" data-tab="casestudy">Case Study</button>
+        </div>
+        <div class="detail-tab-content active" data-content="threats">
+          <h3 style="text-transform: uppercase;">Sector-Specific Threats</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #E53935;">📱</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Point-of-Sale (POS) Malware</h4>
+                <p>Attackers targeting POS terminals to capture credit card data in real time.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #1E88E5;">💳</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Card Skimming & Skimmer Devices</h4>
+                <p>Physical devices installed on card readers to clone payment data.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #43A047;">🔐</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Credential Stuffing & Account Takeover</h4>
+                <p>Automated attacks leveraging stolen credentials from data breaches.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #FB8C00;">🌐</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Peak Season DDoS Attacks</h4>
+                <p>Disruption of e-commerce operations during Black Friday/Cyber Monday sales.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px; grid-column: span 2;">
+              <div style="font-size: 24px; color: #8E24AA;">🔄</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Third-Party Integrations</h4>
+                <p>Vulnerabilities introduced by payment gateways, chatbots, or analytics scripts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="solutions">
+          <h3>Core Security Solutions</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>PCI DSS COMPLIANCE & AUDIT</h4>
+              <p>End-to-end assessment and remediation to meet payment card industry requirements.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>APPLICATION SECURITY TESTING</h4>
+              <p>Comprehensive testing of e-commerce platforms and mobile applications.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>FRAUD DETECTION</h4>
+              <p>Advanced monitoring and analytics to identify suspicious transaction patterns.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>DDOS MITIGATION</h4>
+              <p>Proactive protection to maintain e-commerce availability during peak seasons.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="deliverables">
+          <h3>Deliverables</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>RETAIL SECURITY ASSESSMENT REPORT</h4>
+              <p>Comprehensive findings, risk ratings, and actionable recommendations.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>PCI DSS COMPLIANCE ROADMAP</h4>
+              <p>Step-by-step plan for achieving and maintaining payment card compliance.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>FRAUD PREVENTION STRATEGY</h4>
+              <p>Tailored approach to detecting and mitigating payment fraud.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>SECURITY AWARENESS TRAINING</h4>
+              <p>Customized training programs for retail staff on security best practices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="casestudy">
+          <h3>Case Study</h3>
+          <div class="case-study-content">
+            <div class="case-study-header">
+              <h4>European E-Commerce Retailer - Security Enhancement</h4>
+              <span class="case-study-tag">Retail & e-Commerce</span>
+            </div>
+            <p>An online retailer with 500,000+ customers partnered with Idrak Security to assess their e-commerce platform, implement PCI DSS compliance, and deploy fraud detection systems. This resulted in a 75% reduction in fraudulent transactions and successful completion of their first PCI DSS audit.</p>
+            <div class="case-study-stats">
+              <div class="stat">
+                <span class="stat-number">75%</span>
+                <span class="stat-label">Fraud reduction</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">500K+</span>
+                <span class="stat-label">Customers protected</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">PCI DSS compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manufacturing -->
+      <div id="manufacturing" class="industry-detail">
+        <div class="industry-detail-header" style="background-color: #00BFFF; color: white; padding: 20px; display: flex; align-items: center; gap: 15px;">
+          <div style="font-size: 30px;">🏭</div>
+          <div>
+            <h2 class="industry-detail-title" style="margin: 0; font-size: 24px;">MANUFACTURING & INDUSTRY 4.0 SECURITY</h2>
+            <p class="industry-detail-subtitle" style="margin: 5px 0 0 0; font-size: 14px;">Protect interconnected production environments, IoT devices, and industrial networks from cyber threats that can disrupt operations or steal intellectual property.</p>
+          </div>
+        </div>
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="threats">Threats</button>
+          <button class="detail-tab" data-tab="solutions">Solutions</button>
+          <button class="detail-tab" data-tab="deliverables">Deliverables</button>
+          <button class="detail-tab" data-tab="casestudy">Case Study</button>
+        </div>
+        <div class="detail-tab-content active" data-content="threats">
+          <h3 style="text-transform: uppercase;">Sector-Specific Threats</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #E53935;">🔌</div>
+              <div>
+                <h4 style="text-transform: uppercase;">IoT/IIoT Vulnerabilities</h4>
+                <p>Unpatched firmware on sensors and controllers exposing critical manufacturing processes.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #1E88E5;">⚙️</div>
+              <div>
+                <h4 style="text-transform: uppercase;">PLC/RTU Exploits</h4>
+                <p>Attackers targeting programmable logic controllers (PLCs) to manipulate assembly lines or production parameters.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #43A047;">🔗</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Supply Chain Risks</h4>
+                <p>Malicious hardware or software components introduced during manufacturing or distribution.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #FB8C00;">📝</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Intellectual Property Theft</h4>
+                <p>Cyber espionage aimed at blueprints, design files, and proprietary manufacturing techniques.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="solutions">
+          <h3>Core Security Solutions</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>INDUSTRY 4.0 SECURITY ASSESSMENT</h4>
+              <p>Comprehensive evaluation of connected manufacturing environments and IoT ecosystems.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>OT/IT NETWORK SEGMENTATION</h4>
+              <p>Secure isolation of operational technology from information technology networks.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>INTELLECTUAL PROPERTY PROTECTION</h4>
+              <p>Implementation of data loss prevention and digital rights management solutions.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>SUPPLY CHAIN SECURITY</h4>
+              <p>Vendor risk assessments and secure procurement practices for hardware and software.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="deliverables">
+          <h3>Deliverables</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>INDUSTRY 4.0 SECURITY REPORT</h4>
+              <p>Detailed assessment of connected manufacturing environments with risk ratings.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>NETWORK SEGMENTATION DESIGN</h4>
+              <p>Blueprint for secure OT/IT boundaries in smart manufacturing environments.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>IP PROTECTION STRATEGY</h4>
+              <p>Comprehensive plan to safeguard proprietary manufacturing processes and designs.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>SUPPLY CHAIN SECURITY FRAMEWORK</h4>
+              <p>Standardized approach to evaluating and managing vendor security risks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-tab-content" data-content="casestudy">
+          <h3>Case Study</h3>
+          <div class="case-study-content">
+            <div class="case-study-header">
+              <h4>Automotive Manufacturer - Smart Factory Security</h4>
+              <span class="case-study-tag">Manufacturing & Industry 4.0</span>
+            </div>
+            <p>A leading automotive manufacturer engaged Idrak Security to secure their Industry 4.0 production line, including 500+ IoT sensors and connected robots. We implemented network segmentation, conducted penetration testing, and deployed continuous monitoring solutions.</p>
+            <div class="case-study-stats">
+              <div class="stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">IoT devices secured</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Network segmentation</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Monitoring deployed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Public Sector -->
+      <div id="public" class="industry-detail">
+        <div class="industry-detail-header" style="background-color: #00BFFF; color: white; padding: 20px; display: flex; align-items: center; gap: 15px;">
+          <div style="font-size: 30px;">🏛️</div>
+          <div>
+            <h2 class="industry-detail-title" style="margin: 0; font-size: 24px;">PUBLIC SECTOR & GOVERNMENT SECURITY</h2>
+            <p class="industry-detail-subtitle" style="margin: 5px 0 0 0; font-size: 14px;">Enhance the cybersecurity posture of government agencies, municipalities, and public organizations through secure digital transformation, policy development, and incident preparedness.</p>
+          </div>
+        </div>
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="threats">Threats</button>
+          <button class="detail-tab" data-tab="solutions">Solutions</button>
+          <button class="detail-tab" data-tab="deliverables">Deliverables</button>
+          <button class="detail-tab" data-tab="casestudy">Case Study</button>
+        </div>
+        <div class="detail-tab-content active" data-content="threats">
+          <h3 style="text-transform: uppercase;">Sector-Specific Threats</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #E53935;">🎯</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Nation-State Attacks</h4>
+                <p>Advanced threats targeting critical government infrastructure and sensitive data.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #1E88E5;">🔒</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Data Breaches</h4>
+                <p>Unauthorized access to citizen data, personal information, and classified documents.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #43A047;">🌊</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Service Disruption</h4>
+                <p>DDoS attacks targeting government websites and essential public services.</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #000; padding: 20px; display: flex; gap: 15px;">
+              <div style="font-size: 24px; color: #FB8C00;">🎭</div>
+              <div>
+                <h4 style="text-transform: uppercase;">Social Engineering</h4>
+                <p>Phishing attacks targeting government employees to gain access to secure systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Solutions Content -->
+        <div class="detail-tab-content" data-content="solutions">
+          <h3>Our Security Solutions</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>Critical Infrastructure Protection</h4>
+              <p>Comprehensive security for essential public services and infrastructure.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Government Compliance</h4>
+              <p>Meeting regulatory requirements and security standards for public sector organizations.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Data Protection & Privacy</h4>
+              <p>Securing citizen information and ensuring compliance with data protection regulations.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Security Governance</h4>
+              <p>Establishing robust security frameworks and risk management processes for government agencies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Deliverables Content -->
+        <div class="detail-tab-content" data-content="deliverables">
+          <h3>What You Receive</h3>
+          <div class="tab-content-grid">
+            <div class="tab-content-card">
+              <h4>Government Security Assessment</h4>
+              <p>Comprehensive evaluation of agency security posture and compliance status.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Compliance Documentation</h4>
+              <p>Official reports and documentation for regulatory requirements and audits.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Risk Management Plan</h4>
+              <p>Prioritized actions to address security gaps and mitigate identified risks.</p>
+            </div>
+            <div class="tab-content-card">
+              <h4>Security Training Program</h4>
+              <p>Customized training for government employees on security best practices and threat awareness.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Case Study Content -->
+        <div class="detail-tab-content" data-content="casestudy">
+          <h3>Case Study</h3>
+          <div class="case-study-content">
+            <div class="case-study-header">
+              <h4>Municipal Government - Digital Transformation Security</h4>
+              <span class="case-study-tag">Public Sector & Government</span>
+            </div>
+            <p>A major city government partnered with Idrak Security to secure their digital transformation initiative, including e-government portals, citizen data systems, and cloud migration. We implemented security governance, conducted compliance assessments, and delivered comprehensive security training for government employees.</p>
+            <div class="case-study-stats">
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Compliance achieved</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">5000+</span>
+                <span class="stat-label">Employees trained</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">95%</span>
+                <span class="stat-label">Risk reduction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3>Ready to Secure Your Industry?</h3>
+        <p>Every industry has unique needs. Let's discuss how we can customize our solutions for your specific challenges.</p>
+        <a href="contacts.html" class="btn btn-primary">Contact us now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4 class="h4">Idrak Security SRL</h4>
+          <p>Via Pietro Micca 15, 10122 Torino (TO), Italy</p>
+          <p>Tel: +39 3921502806</p>
+          <p>Email: <a href="mailto:info@idrak-security.com">info@idrak-security.com</a></p>
+          <p>Website: <a href="https://www.idrak-security.com">www.idrak-security.com</a></p>
+          <p>Mon–Fri · 09:00–18:00 CET</p>
+          <p>P.IVA 12503620010</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-column"><h5>Company</h5><a href="about.html">About us</a><a href="client-area.html">Client area</a><a href="contacts.html">Contact</a></div>
+          <div class="footer-nav-column"><h5>Services</h5><a href="services.html#pentest">Penetration Testing</a><a href="services.html#audits">Security Audits</a><a href="services.html#forensics">Digital Forensics</a><a href="services.html#assessment">Vulnerability Assessment</a><a href="services.html#training">Training & Awareness</a></div>
+          <div class="footer-nav-column"><h5>Industries</h5><a href="industries.html#financial">Financial Services</a><a href="industries.html#energy">Energy & Utilities</a><a href="industries.html#manufacturing">Manufacturing & Industry 4.0</a><a href="industries.html#public">Public Sector</a><a href="industries.html#retail">Retail & e-Commerce</a></div>
+          <div class="footer-nav-column"><h5>Legal</h5><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="terms-of-service.html">Terms of services</a></div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+            <div class="footer-bottom">
+        <div class="footer-tagline">
+          <h2 class="hero-title">Rebuilding<br>Cyber World</h2>
+          <div class="footer-brand-bottom">
+                      <img
+            class="whats-app-image-2026-01-20-at-145511-1-1"
+            src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png"
+            alt="WhatsApp Image 2026-01-20 at 14.55.11 (1) 1"
+          />
+              <circle cx="8" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="14" cy="6" r="1.5" fill="#1E293B"/>
+              <circle cx="20" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="26" cy="10" r="1.5" fill="#1E293B"/>
+              <circle cx="32" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="38" cy="6" r="1.5" fill="#1E293B"/>
+              <circle cx="44" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="50" cy="10" r="1.5" fill="#1E293B"/>
+              <circle cx="56" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="10" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="16" cy="12" r="1.5" fill="#1E293B"/>
+              <circle cx="22" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="28" cy="16" r="1.5" fill="#1E293B"/>
+              <circle cx="34" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="40" cy="12" r="1.5" fill="#1E293B"/>
+              <circle cx="46" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="52" cy="16" r="1.5" fill="#1E293B"/>
+              <circle cx="6" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="12" cy="18" r="1.5" fill="#1E293B"/>
+              <circle cx="18" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="24" cy="22" r="1.5" fill="#1E293B"/>
+              <circle cx="30" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="36" cy="18" r="1.5" fill="#1E293B"/>
+              <circle cx="42" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="48" cy="22" r="1.5" fill="#1E293B"/>
+              <circle cx="54" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="8" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="14" cy="24" r="1.5" fill="#1E293B"/>
+              <circle cx="20" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="26" cy="28" r="1.5" fill="#1E293B"/>
+              <circle cx="32" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="38" cy="24" r="1.5" fill="#1E293B"/>
+              <circle cx="44" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="50" cy="28" r="1.5" fill="#1E293B"/>
+              <circle cx="10" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="16" cy="30" r="1.5" fill="#1E293B"/>
+              <circle cx="22" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="28" cy="34" r="1.5" fill="#1E293B"/>
+              <circle cx="34" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="40" cy="30" r="1.5" fill="#1E293B"/>
+              <circle cx="46" cy="32" r="1.5" fill="#1E293B"/>
+            </svg>
+            <!-- <span class="footer-brand-text">Idrak Security</span> -->
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/idrak-security" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" fill="currentColor"/><rect x="2" y="9" width="4" height="12" fill="currentColor"/><circle cx="4" cy="4" r="2" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal | Idrak Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v5-style.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <style>
+    .page-header {
+      position: relative;
+      padding: 80px 24px 60px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    .page-header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 20px 20px, var(--grey-light) 2px, transparent 0);
+      background-size: 40px 40px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .page-header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .page-header-content h1 {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .page-header-content .subtitle {
+      font-size: 18px;
+      color: var(--grey-dark);
+      margin-bottom: 16px;
+    }
+    .page-header-content .description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--grey-dark);
+      margin-bottom: 24px;
+    }
+    .page-header-content .effective-date {
+      font-size: 14px;
+      color: var(--grey-medium);
+      font-weight: 500;
+    }
+    .client-portal {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .portal-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .login-section {
+      background: var(--white);
+      padding: 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid var(--grey-light);
+    }
+    .login-section h2 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      font-size: 14px;
+      color: var(--grey-dark);
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary-cyan);
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+    }
+    .password-group {
+      position: relative;
+    }
+    .password-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--grey-medium);
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background: var(--dark-blue);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--primary-cyan);
+      color: var(--dark-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--dark-blue);
+      border: 1px solid var(--dark-blue);
+    }
+    .btn-secondary:hover {
+      background: var(--dark-blue);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .forgot-password {
+      display: block;
+      text-align: right;
+      font-size: 14px;
+      color: var(--grey-dark);
+      margin-bottom: 24px;
+      text-decoration: none;
+    }
+    .forgot-password:hover {
+      color: var(--primary-cyan);
+      text-decoration: underline;
+    }
+    .divider {
+      margin: 24px 0;
+      border-top: 1px solid var(--grey-light);
+      position: relative;
+    }
+    .divider-text {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--white);
+      padding: 0 12px;
+      font-size: 14px;
+      color: var(--grey-medium);
+    }
+    .contact-section {
+      background: var(--dark-blue);
+      padding: 32px;
+      border-radius: 8px;
+      color: var(--white);
+    }
+    .contact-section h2 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .contact-section p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .contact-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-cyan);
+      flex-shrink: 0;
+    }
+    .contact-item span {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .support-info {
+      margin-top: 40px;
+      background: var(--white);
+      padding: 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid var(--grey-light);
+    }
+    .support-info h3 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+    }
+    .support-info p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--grey-dark);
+      margin-bottom: 16px;
+    }
+    .support-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .support-feature {
+      text-align: center;
+      padding: 16px;
+      background: var(--grey-ultra-light);
+      border-radius: 6px;
+      border: 1px solid var(--grey-light);
+    }
+    .support-feature svg {
+      width: 32px;
+      height: 32px;
+      color: var(--primary-cyan);
+      margin-bottom: 12px;
+    }
+    .support-feature h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
+    }
+    .support-feature p {
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--grey-dark);
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 60px 24px 40px;
+      }
+      .page-header-content h1 {
+        font-size: 28px;
+      }
+      .portal-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .login-section,
+      .contact-section,
+      .support-info {
+        padding: 24px;
+      }
+      .support-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png" alt="Idrak Security" class="logo-img">
+      </a>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="contacts.html" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="header-right">
+        <div class="lang-selector">
+          <span>Eng</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22M12 2C9.5 4.5 8 8 8 12C8 16 9.5 19.5 12 22M2 12H22" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <a href="client-area.html" class="user-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="#1E293B" stroke-width="1.5"/>
+            <path d="M20 19C20 16.2 16.4 14 12 14C7.6 14 4 16.2 4 19" stroke="#1E293B" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-line"></div>
+  </header>
+
+  <section class="page-header">
+    <div class="page-header-pattern"></div>
+    <div class="page-header-content">
+      <h1>Client Portal</h1>
+      <p class="subtitle">Secure Access to Your Security Resources</p>
+      <p class="description">
+        Existing clients can log in to download detailed vulnerability reports, track incident response progress, and
+        manage support tickets. Contact our support team if you need credentials.
+      </p>
+    </div>
+  </section>
+
+  <main class="client-portal">
+    <div class="portal-content">
+      <section class="login-section">
+        <h2>Log In</h2>
+        <form>
+          <div class="form-group">
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group password-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="button" class="password-toggle">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <a href="#" class="forgot-password">Forgot your password?</a>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Log in</button>
+        </form>
+        <div class="divider">
+          <span class="divider-text">Need Help?</span>
+        </div>
+        <a href="contacts.html" class="btn btn-secondary" style="width: 100%;">Contact Support</a>
+      </section>
+
+      <section class="contact-section">
+        <h2>Contact Information</h2>
+        <p>Reach us through one of the following channels. We're available for support during business hours.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4ZM20 8L12 13L4 8V6L12 10L20 6V8Z" fill="currentColor"/>
+            </svg>
+            <span>info@idraksecurity.com</span>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16.3 14.9 16.2 14.9 16.1 14.9C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8.1 13.6 6.6 10.8L8.8 8.6C9 8.4 9.1 8.2 9.1 7.9C9.1 7.8 9.1 7.7 9.1 7.6C9.5 6.5 9.7 5.2 9.7 4C9.7 3.5 9.5 3.1 9.2 2.7C8.8 2.4 8.4 2.2 8 2.2C7.6 2.2 7.2 2.4 6.8 2.7L2.7 6.8C2.4 7.2 2.2 7.6 2.2 8C2.2 8.4 2.4 8.8 2.7 9.2C3.1 9.5 3.5 9.7 4 9.7C5.2 9.7 6.5 9.5 7.6 9.1C7.7 9.1 7.8 9.1 7.9 9.1C8.2 9.1 8.4 9 8.6 8.8L10.8 6.6C13.6 8.1 15.9 10.4 17.4 13.2L15.2 15.4C15 15.6 14.9 15.8 14.9 16.1C14.9 16.2 14.9 16.3 14.9 16.4C15.3 17.5 15.5 18.8 15.5 20C15.5 20.5 15.7 20.9 16.1 21.3C16.5 21.7 16.9 21.9 17.5 21.9C18 21.9 18.4 21.7 18.8 21.3L22.9 17.2C23.3 16.8 23.5 16.4 23.5 16C23.5 15.6 23.3 15.2 22.9 14.8C22.6 14.4 22.2 14.2 21.8 14.2C21.3 14.2 20.9 14.4 20.5 14.8L20 15.3V15.5Z" fill="currentColor"/>
+            </svg>
+            <span>+39 3921502806</span>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9C5 11.38 6.19 13.47 8 14.74V17C8 17.55 8.45 18 9 18H15C15.55 18 16 17.55 16 17V14.74C17.81 13.47 19 11.38 19 9C19 5.13 15.87 2 12 2ZM12 4C14.76 4 17 6.24 17 9C17 10.79 15.94 12.36 14.36 13.32V15H9.64V13.32C8.06 12.36 7 10.79 7 9C7 6.24 9.24 4 12 4ZM12 6C10.34 6 9 7.34 9 9C9 10.66 10.34 12 12 12C13.66 12 15 10.66 15 9C15 7.34 13.66 6 12 6Z" fill="currentColor"/>
+            </svg>
+            <span>Via Pietro Micca 15, 10122 Torino (TO), Italy</span>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+            </svg>
+            <span>Mon–Fri · 09:00–18:00 CET</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="support-info">
+      <h3>What You Can Access</h3>
+      <p>Our client portal provides secure access to the following resources:</p>
+      <div class="support-features">
+        <div class="support-feature">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20ZM11 7H13V13L16.2 16.2L17 14.9L13 11.9V7Z" fill="currentColor"/>
+          </svg>
+          <h4>Vulnerability Reports</h4>
+          <p>Download detailed security assessment reports with actionable recommendations.</p>
+        </div>
+        <div class="support-feature">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM19 19H5V5H19V19ZM12 17C13.6569 17 15 15.6569 15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17ZM12 15C11.4477 15 11 14.5523 11 14C11 13.4477 11.4477 13 12 13C12.5523 13 13 13.4477 13 14C13 14.5523 12.5523 15 12 15Z" fill="currentColor"/>
+          </svg>
+          <h4>Support Tickets</h4>
+          <p>Submit and track the status of your security support requests.</p>
+        </div>
+        <div class="support-feature">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z" fill="currentColor"/>
+          </svg>
+          <h4>Incident Tracking</h4>
+          <p>Monitor the progress of ongoing security incident responses.</p>
+        </div>
+        <div class="support-feature">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15ZM12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13ZM12 17C12.5523 17 13 16.5523 13 16V15H11V16C11 16.5523 11.4477 17 12 17ZM12 7C12.5523 7 13 6.55228 13 6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6C11 6.55228 11.4477 7 12 7Z" fill="currentColor"/>
+          </svg>
+          <h4>Security Dashboard</h4>
+          <p>View an overview of your organization's security posture.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-background">
+      <img src="img/frame/frame-objects1.svg" alt="" aria-hidden="true">
+    </div>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4 class="h4">Idrak Security SRL</h4>
+          <p>Via Pietro Micca 15, 10122 Torino (TO), Italy</p>
+          <p>Tel: +39 3921502806</p>
+          <p>Email: <a href="mailto:info@idrak-security.com">info@idrak-security.com</a></p>
+          <p>Website: <a href="https://www.idrak-security.com">www.idrak-security.com</a></p>
+          <p>Mon–Fri · 09:00–18:00 CET</p>
+          <p>P.IVA 12503620010</p>
+        </div>
+        
+        <div class="footer-nav">
+          <div class="footer-nav-column">
+            <h5>Company</h5>
+            <a href="about.html">About us</a>
+            <a href="client-era.html">Client area</a>
+            <a href="contacts.html">Contact</a>
+          </div>
+          
+          <div class="footer-nav-column">
+            <h5>Services</h5>
+            <a href="services.html#pentest">Penetration Testing</a>
+            <a href="services.html#audits">Security Audits</a>
+            <a href="services.html#forensics">Digital Forensics</a>
+            <a href="services.html#assessment">Vulnerability Assessment</a>
+            <a href="services.html#training">Training & Awareness</a>
+          </div>
+          
+          <div class="footer-nav-column">
+            <h5>Industries</h5>
+            <a href="industries.html#financial">Financial Services</a>
+            <a href="industries.html#energy">Energy & Utilities</a>
+            <a href="industries.html#manufacturing">Manufacturing & Industry 4.0</a>
+            <a href="industries.html#public">Public Sector</a>
+            <a href="industries.html#retail">Retail & e-Commerce</a>
+          </div>
+          
+          <div class="footer-nav-column">
+            <h5>Legal</h5>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+            <a href="terms-of-service.html">Terms of services</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom">
+        <div class="footer-tagline">
+          <h2 class="hero-title">Rebuilding<br>Cyber World</h2>
+                  <img
+          class="whats-app-image-2026-01-20-at-145511-1-1"
+          src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png"
+          alt="Idrak Security Logo"
+        />
+        </div>
+        
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/idrak-security" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" fill="currentColor"/>
+              <rect x="2" y="9" width="4" height="12" fill="currentColor"/>
+              <circle cx="4" cy="4" r="2" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Password toggle functionality
+    document.querySelector('.password-toggle').addEventListener('click', function() {
+      const passwordInput = document.getElementById('password');
+      const passwordIcon = this.querySelector('svg');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordIcon.innerHTML = '<path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="currentColor"/>';
+      } else {
+        passwordInput.type = 'password';
+        passwordIcon.innerHTML = '<path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="currentColor"/>';
+      }
+    });
+  </script>
+</body>
+</html>

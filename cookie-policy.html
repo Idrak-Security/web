@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy | Idrak Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v5-style.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <style>
+    .page-header {
+      position: relative;
+      padding: 80px 24px 60px;
+      overflow: hidden;
+    }
+    .page-header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 20px 20px, var(--grey-light) 2px, transparent 0);
+      background-size: 40px 40px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .page-header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .page-header-content h1 {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .page-header-content .subtitle {
+      font-size: 18px;
+      color: var(--grey-dark);
+      margin-bottom: 16px;
+    }
+    .page-header-content .description {
+      font-size: 16px;
+      color: var(--grey-medium);
+      max-width: 700px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .legal-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .effective-date {
+      display: inline-block;
+      background: var(--primary-cyan);
+      color: var(--dark-blue);
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      border: 2px solid var(--dark-blue);
+    }
+    .legal-section {
+      margin-bottom: 56px;
+      padding: 32px;
+      border: 1px solid var(--grey-light);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .legal-section h2 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--primary-cyan);
+    }
+    .legal-section p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--grey-dark);
+      margin-bottom: 20px;
+    }
+    .legal-section ul {
+      margin: 16px 0 20px 24px;
+      list-style: disc;
+    }
+    .legal-section li {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--grey-dark);
+      margin-bottom: 10px;
+    }
+    .third-party-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .third-party-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 6px;
+      background: var(--grey-ultra-light);
+      text-align: center;
+    }
+    .third-party-item h3 {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .third-party-item p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--grey-dark);
+      margin: 0;
+    }
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .purpose-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 6px;
+      background: var(--grey-ultra-light);
+      text-align: center;
+    }
+    .purpose-item h3 {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .purpose-item p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--grey-dark);
+      margin: 0;
+    }
+    .info-box {
+      background: var(--primary-cyan-100);
+      padding: 24px;
+      border-radius: 8px;
+      margin: 24px 0;
+      border: 1px solid var(--primary-cyan);
+    }
+    .info-box p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--dark-blue);
+      margin: 0;
+    }
+    .retention-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .retention-item {
+      padding: 16px;
+      background: var(--primary-cyan-100);
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--primary-cyan);
+    }
+    .retention-item span {
+      font-size: 14px;
+      color: var(--dark-blue);
+    }
+    .retention-item .period {
+      font-weight: 600;
+      color: var(--dark-blue);
+    }
+    .update-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .update-item {
+      padding: 20px;
+      background: var(--primary-cyan-100);
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid var(--primary-cyan);
+    }
+    .update-item h3 {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
+    }
+    .update-item p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--dark-blue);
+      margin: 0;
+    }
+    .contact-cookie {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 40px;
+      border-radius: 8px;
+      margin-top: 56px;
+      text-align: center;
+      border: 2px solid var(--primary-cyan);
+    }
+    .contact-cookie h3 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-cyan);
+      margin-bottom: 24px;
+    }
+    .contact-cookie p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .contact-cookie .btn {
+      margin-top: 24px;
+      background: var(--primary-cyan);
+      color: var(--dark-blue);
+      border: none;
+      padding: 12px 32px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .contact-cookie .btn:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+    }
+    .policy-url {
+      background: var(--grey-ultra-light);
+      padding: 16px;
+      border-radius: 6px;
+      margin-top: 24px;
+      text-align: center;
+      border: 1px solid var(--grey-light);
+    }
+    .policy-url p {
+      font-size: 14px;
+      color: var(--dark-blue);
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 60px 24px 40px;
+      }
+      .page-header-content h1 {
+        font-size: 28px;
+      }
+      .legal-section {
+        padding: 24px;
+      }
+      .third-party-grid,
+      .purpose-grid,
+      .retention-grid,
+      .update-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png" alt="Idrak Security" class="logo-img"></a>
+      <nav class="nav"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About us</a><a href="services.html" class="nav-link">Services</a><a href="industries.html" class="nav-link">Industries</a><a href="contacts.html" class="nav-link">Contact</a></nav>
+      <div class="header-right">
+        <div class="lang-selector">
+          <span>Eng</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22M12 2C9.5 4.5 8 8 8 12C8 16 9.5 19.5 12 22M2 12H22" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <a href="client-era.html" class="user-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="#1E293B" stroke-width="1.5"/>
+            <path d="M20 19C20 16.2 16.4 14 12 14C7.6 14 4 16.2 4 19" stroke="#1E293B" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-line"></div>
+  </header>
+  <main>
+    <section class="page-header">
+      <div class="page-header-pattern"></div>
+      <div class="page-header-content">
+        <h1>Cookie Policy</h1>
+        <p class="subtitle">Cookie Policy of Idrak Security SRL</p>
+        <p class="description">This policy explains how we use cookies and similar tracking technologies on our website to enhance your browsing experience.</p>
+        <span class="effective-date">Effective Date: June 6, 2025</span>
+      </div>
+    </section>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h2>1. Introduction</h2>
+        <p>This Cookie Policy explains how Idrak Security SRL uses cookies and similar tracking technologies on our website (www.idrak-security.com). By accessing or using our website, you consent to the use of cookies as described in this policy.</p>
+      </div>
+      <div class="legal-section">
+        <h2>2. What Are Cookies?</h2>
+        <p>Cookies are small text files placed on your device (computer, smartphone, or tablet) when you visit a website. They store information about your browsing activity to enhance functionality, performance, and user experience.</p>
+        <p>Cookies can be first-party (set by our domain) or third-party (set by external services).</p>
+      </div>
+      <div class="legal-section">
+        <h2>3. Types of Cookies We Use</h2>
+        <div class="purpose-grid">
+          <div class="purpose-item">
+            <h3>Strictly Necessary</h3>
+            <p>Enable core site functionality</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Performance / Analytics</h3>
+            <p>Collect anonymous usage statistics</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Functional</h3>
+            <p>Remember user preferences</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Marketing / Profiling</h3>
+            <p>Track user behavior for targeted advertising</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2>4. Managing and Disabling Cookies</h2>
+        <p>Most browsers allow you to control cookies via settings. You can remove or block cookies through your browser preferences. Be aware that blocking certain cookies may affect the website's functionality and user experience.</p>
+        <div class="info-box">
+          <p><strong>Browser Cookie Settings:</strong></p>
+          <ul>
+            <li><strong>Google Chrome:</strong> Settings > Privacy and security > Cookies and other site data</li>
+            <li><strong>Mozilla Firefox:</strong> Settings > Privacy and security > Cookies and other site data</li>
+            <li><strong>Apple Safari:</strong> Preferences > Privacy > Manage Website Data</li>
+            <li><strong>Microsoft Edge:</strong> Settings > Site permissions > Cookies and site data</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2>5. Cookie Consent</h2>
+        <p>When you first visit our website, we display a cookie banner that explains our use of cookies and provides options for managing your preferences. You can:</p>
+        <ul>
+          <li>Accept all cookies</li>
+          <li>Reject non-essential cookies</li>
+          <li>Customize your cookie preferences</li>
+        </ul>
+        <p>You can modify your cookie preferences at any time through the "Cookie Settings" link in the footer of our website.</p>
+      </div>
+      <div class="legal-section">
+        <h2>6. Cookie Policy Updates</h2>
+        <p>We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will post any updated version on our website with a new effective date.</p>
+      </div>
+      <div class="legal-section">
+        <h2>7. Third-Party Cookies</h2>
+        <p>Some services integrated into our website (e.g., social media widgets, embedded videos, third-party analytics) set their own cookies. We do not control these cookies, and they are subject to the respective third parties' privacy and cookie policies.</p>
+        <div class="third-party-grid">
+          <div class="third-party-item">
+            <h3>Google Analytics</h3>
+            <p>Website analytics service</p>
+          </div>
+          <div class="third-party-item">
+            <h3>Facebook Pixel</h3>
+            <p>Social media analytics</p>
+          </div>
+          <div class="third-party-item">
+            <h3>YouTube (embedded videos)</h3>
+            <p>Video content provider</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2>8. Purpose of Data Collection</h2>
+        <p>Cookies enhance your browsing experience by:</p>
+        <div class="purpose-grid">
+          <div class="purpose-item">
+            <h3>Authentication and Login Management</h3>
+            <p>Keeping you logged in and maintaining your session</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Preferences and Personalization</h3>
+            <p>Remembering language and display preferences</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Analysis and Improvement</h3>
+            <p>Analyzing usage patterns to improve performance</p>
+          </div>
+          <div class="purpose-item">
+            <h3>Personalized Content and Ads</h3>
+            <p>Delivering personalized content and targeted advertisements</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <p><strong>Privacy Note:</strong> No personally identifiable information is stored in performance/analytics cookies.</p>
+        </div>
+        <div class="info-box">
+          <p><strong>Marketing Cookies:</strong> Marketing cookies may be aggregated with broader datasets to deliver relevant ads; we do not sell your personal data.</p>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2>9. Data Retention</h2>
+        <p>Cookies remain on your device for varying durations, depending on their purpose:</p>
+        <div class="retention-grid">
+          <div class="retention-item">
+            <span>Session Cookies</span>
+            <span class="period">Deleted when you close your browser</span>
+          </div>
+          <div class="retention-item">
+            <span>Persistent Cookies</span>
+            <span class="period">Remain until they expire or are manually deleted</span>
+          </div>
+          <div class="retention-item">
+            <span>Analytics Cookies</span>
+            <span class="period">Usually up to 24 months</span>
+          </div>
+          <div class="retention-item">
+            <span>Functional Cookies</span>
+            <span class="period">Up to 12 months</span>
+          </div>
+          <div class="retention-item">
+            <span>Marketing Cookies</span>
+            <span class="period">Up to 24 months</span>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2>10. Updates to This Cookie Policy</h2>
+        <p>We may update this Cookie Policy to reflect changes in our practices, applicable technologies, or legal requirements.</p>
+        <ul>
+          <li>All revisions will be published at www.idrak-security.com, indicating the effective date.</li>
+          <li>For significant changes impacting data subjects, we will notify registered users via email (where possible) or place a prominent notice on our homepage.</li>
+        </ul>
+        <div class="update-grid">
+          <div class="update-item">
+            <h3>Automatic Publication</h3>
+            <p>Updates automatically published on website</p>
+          </div>
+          <div class="update-item">
+            <h3>Clear Effective Date</h3>
+            <p>Effective date clearly indicated at the top</p>
+          </div>
+          <div class="update-item">
+            <h3>Additional Notifications</h3>
+            <p>Notices for significant changes via website</p>
+          </div>
+        </div>
+        <div class="policy-url">
+          <p>Policy URL: www.idrak-security.com/cookie-policy</p>
+        </div>
+      </div>
+      <div class="contact-cookie">
+        <h3>Contact for Cookie Questions</h3>
+        <p>For questions about this Cookie Policy or to exercise your cookie-related rights, you can contact us:</p>
+        <p><strong>Email:</strong> info@idrak-security.com</p>
+        <p><strong>Phone:</strong> +39 3331081313</p>
+        <p><strong>Address:</strong> Idrak Security SRL, Via Pietro Micca 15, 10122 Turin, Italy</p>
+        <a href="mailto:info@idrak-security.com" class="btn">Manage cookie preferences →</a>
+        <span class="effective-date">Effective Date: June 6, 2025</span>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand"><h4 class="h4">Idrak Security SRL</h4><p>Via Pietro Micca 15, 10122 Torino (TO), Italy</p><p>Tel: +39 3921502806</p><p>Email: <a href="mailto:info@idrak-security.com">info@idrak-security.com</a></p><p>Mon–Fri · 09:00–18:00 CET</p><p>P.IVA 12503620010</p></div>
+        <div class="footer-nav">
+          <div class="footer-nav-column"><h5>Company</h5><a href="about.html">About us</a><a href="client-area.html">Client area</a><a href="contacts.html">Contact</a></div>
+          <div class="footer-nav-column"><h5>Services</h5><a href="services.html">Penetration Testing</a><a href="services.html">Security Audits</a><a href="services.html">Digital Forensics</a></div>
+          <div class="footer-nav-column"><h5>Industries</h5><a href="industries.html">Financial Services</a><a href="industries.html">Energy & Utilities</a><a href="industries.html">Manufacturing</a></div>
+          <div class="footer-nav-column"><h5>Legal</h5><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="terms-of-service.html">Terms of services</a></div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+            <div class="footer-bottom">
+        <div class="footer-tagline">
+          <h2 class="hero-title">Rebuilding<br>Cyber World</h2>
+          <div class="footer-brand-bottom">
+                      <img
+            class="whats-app-image-2026-01-20-at-145511-1-1"
+            src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png"
+            alt="WhatsApp Image 2026-01-20 at 14.55.11 (1) 1"
+          />
+              <circle cx="8" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="14" cy="6" r="1.5" fill="#1E293B"/>
+              <circle cx="20" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="26" cy="10" r="1.5" fill="#1E293B"/>
+              <circle cx="32" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="38" cy="6" r="1.5" fill="#1E293B"/>
+              <circle cx="44" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="50" cy="10" r="1.5" fill="#1E293B"/>
+              <circle cx="56" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="10" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="16" cy="12" r="1.5" fill="#1E293B"/>
+              <circle cx="22" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="28" cy="16" r="1.5" fill="#1E293B"/>
+              <circle cx="34" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="40" cy="12" r="1.5" fill="#1E293B"/>
+              <circle cx="46" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="52" cy="16" r="1.5" fill="#1E293B"/>
+              <circle cx="6" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="12" cy="18" r="1.5" fill="#1E293B"/>
+              <circle cx="18" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="24" cy="22" r="1.5" fill="#1E293B"/>
+              <circle cx="30" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="36" cy="18" r="1.5" fill="#1E293B"/>
+              <circle cx="42" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="48" cy="22" r="1.5" fill="#1E293B"/>
+              <circle cx="54" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="8" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="14" cy="24" r="1.5" fill="#1E293B"/>
+              <circle cx="20" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="26" cy="28" r="1.5" fill="#1E293B"/>
+              <circle cx="32" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="38" cy="24" r="1.5" fill="#1E293B"/>
+              <circle cx="44" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="50" cy="28" r="1.5" fill="#1E293B"/>
+              <circle cx="10" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="16" cy="30" r="1.5" fill="#1E293B"/>
+              <circle cx="22" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="28" cy="34" r="1.5" fill="#1E293B"/>
+              <circle cx="34" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="40" cy="30" r="1.5" fill="#1E293B"/>
+              <circle cx="46" cy="32" r="1.5" fill="#1E293B"/>
+            </svg>
+            <!-- <span class="footer-brand-text">Idrak Security</span> -->
+          </div>
+        </div>
+        <div class="footer-social"><a href="https://linkedin.com/company/idrak-security" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" fill="currentColor"/><rect x="2" y="9" width="4" height="12" fill="currentColor"/><circle cx="4" cy="4" r="2" fill="currentColor"/></svg></a></div>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

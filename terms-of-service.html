@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | Idrak Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v5-style.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <style>
+    .page-header {
+      position: relative;
+      padding: 80px 24px 60px;
+      overflow: hidden;
+    }
+    .page-header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 20px 20px, var(--grey-light) 2px, transparent 0);
+      background-size: 40px 40px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .page-header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .page-header-content h1 {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .page-header-content .subtitle {
+      font-size: 18px;
+      color: var(--grey-dark);
+      margin-bottom: 16px;
+    }
+    .page-header-content .description {
+      font-size: 16px;
+      color: var(--grey-medium);
+      max-width: 700px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .effective-date {
+      display: inline-block;
+      background: var(--primary-cyan);
+      color: var(--dark-blue);
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      border: 2px solid var(--dark-blue);
+    }
+    .legal-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .company-info {
+      margin-bottom: 56px;
+      padding: 32px;
+      border: 1px solid var(--grey-light);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .company-info h2 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .company-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .company-info-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .company-info-right {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .company-info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--dark-blue);
+    }
+    .company-info-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-cyan);
+      flex-shrink: 0;
+    }
+    .legal-section {
+      margin-bottom: 48px;
+      padding: 32px;
+      border: 1px solid var(--grey-light);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .legal-section h2 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .section-number {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-cyan);
+      background: var(--dark-blue);
+      padding: 4px 12px;
+      border-radius: 4px;
+      min-width: 36px;
+      text-align: center;
+    }
+    .legal-section p {
+      margin-bottom: 16px;
+      line-height: 1.6;
+      color: var(--grey-dark);
+    }
+    .definitions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .definition-item {
+      padding: 16px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .definition-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
+    }
+    .definition-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .service-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .service-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .service-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .delivery-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .delivery-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .delivery-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .legal-section ul {
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+    .legal-section li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+      color: var(--grey-dark);
+    }
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .payment-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .payment-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .payment-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .late-payment-warning {
+      margin-top: 24px;
+      padding: 16px;
+      border: 2px solid var(--warning-color);
+      border-radius: 4px;
+      background: rgba(255, 193, 7, 0.1);
+    }
+    .late-payment-warning h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--warning-color);
+      margin-bottom: 8px;
+    }
+    .late-payment-warning p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+      color: var(--grey-dark);
+    }
+    .intellectual-property {
+      margin-top: 24px;
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .usage-license {
+      margin-top: 16px;
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .confidentiality-duration {
+      margin-top: 16px;
+      padding: 16px;
+      border-left: 4px solid var(--primary-cyan);
+      background: var(--grey-very-light);
+    }
+    .liability-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .liability-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .liability-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .liability-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .termination-early {
+      margin-top: 24px;
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .termination-early h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .termination-early p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .termination-consequences {
+      margin-top: 16px;
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .termination-consequences h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .termination-consequences ul {
+      margin: 0;
+      padding-left: 24px;
+    }
+    .termination-consequences li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+      color: var(--grey-dark);
+    }
+    .changes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .changes-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .changes-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .changes-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .governing-law-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .governing-law-item {
+      padding: 20px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+    }
+    .governing-law-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .governing-law-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .final-provisions {
+      margin-top: 24px;
+    }
+    .final-provisions h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+    .final-provisions-item {
+      padding: 16px;
+      border: 1px solid var(--grey-light);
+      border-radius: 4px;
+      background: var(--grey-very-light);
+      margin-bottom: 16px;
+    }
+    .final-provisions-item p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .legal-contact {
+      margin-top: 48px;
+      padding: 32px;
+      border: 1px solid var(--grey-light);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .legal-contact h2 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .legal-contact p {
+      margin-bottom: 24px;
+      line-height: 1.6;
+      color: var(--grey-dark);
+    }
+    .legal-contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .legal-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--dark-blue);
+    }
+    .legal-contact-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary-cyan);
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .company-info-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .definitions-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .delivery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .payment-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .liability-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .changes-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .governing-law-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .legal-section {
+        padding: 24px;
+      }
+      .company-info {
+        padding: 24px;
+      }
+      .legal-contact {
+        padding: 24px;
+      }
+      .page-header-content h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png" alt="Idrak Security" class="logo-img"></a>
+      <nav class="nav"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About us</a><a href="services.html" class="nav-link">Services</a><a href="industries.html" class="nav-link">Industries</a><a href="contacts.html" class="nav-link">Contact</a></nav>
+      <div class="header-right">
+        <div class="lang-selector">
+          <span>Eng</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22M12 2C9.5 4.5 8 8 8 12C8 16 9.5 19.5 12 22M2 12H22" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <a href="client-era.html" class="user-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="#1E293B" stroke-width="1.5"/>
+            <path d="M20 19C20 16.2 16.4 14 12 14C7.6 14 4 16.2 4 19" stroke="#1E293B" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header-line"></div>
+  </header>
+  <main>
+    <section class="page-header">
+      <div class="page-header-pattern"></div>
+      <div class="page-header-content">
+        <h1>Terms of Service</h1>
+        <p class="subtitle">Terms of Service of Idrak Security SRL</p>
+        <p class="description">These terms define the conditions for using our website and professional cybersecurity services. Please read them carefully before accessing or using our services.</p>
+        <span class="effective-date">Effective Date: June 6, 2025</span>
+      </div>
+    </section>
+    <div class="legal-content">
+      <div class="company-info">
+        <h2>Company Information</h2>
+        <div class="company-info-grid">
+          <div class="company-info-left">
+            <div class="company-info-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="currentColor"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+              </svg>
+              <span>Idrak Security SRL</span>
+            </div>
+            <div class="company-info-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 11.5C12.8284 11.5 13.5 10.8284 13.5 10C13.5 9.17157 12.8284 8.5 12 8.5C11.1716 8.5 10.5 9.17157 10.5 10C10.5 10.8284 11.1716 11.5 12 11.5Z" fill="currentColor"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+              </svg>
+              <span>Via Pietro Micca 15, 10122 Turin, Italy</span>
+            </div>
+            <div class="company-info-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 11.5C12.8284 11.5 13.5 10.8284 13.5 10C13.5 9.17157 12.8284 8.5 12 8.5C11.1716 8.5 10.5 9.17157 10.5 10C10.5 10.8284 11.1716 11.5 12 11.5Z" fill="currentColor"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+              </svg>
+              <span>P.IVA: 12503620010</span>
+            </div>
+          </div>
+          <div class="company-info-right">
+            <div class="company-info-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16.3 14.9 16.2 14.9 16.1 14.9C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8 13.6 6 10.5L8.2 8.3C8.4 8.1 8.5 7.9 8.5 7.6C8.5 7.4 8.4 7.3 8.3 7.2C7.9 6.1 7.7 4.9 7.7 3.7C7.7 3.2 7.5 2.7 7.3 2.3C7.2 2.2 7 2.1 6.9 2C6.6 1.8 6.3 1.7 6 1.7C5.7 1.7 5.4 1.8 5.1 2C4.9 2.1 4.8 2.2 4.7 2.3C4.3 2.7 4.1 3.2 4.1 3.7C4.1 8.4 6.8 12.9 11 14.8V14.8L11.3 15C11.5 15.2 11.7 15.3 12 15.3C12.3 15.3 12.5 15.2 12.7 15L13 14.8V14.8C17.2 12.9 19.9 8.4 19.9 3.7C19.9 3.2 19.7 2.7 19.5 2.3C19.4 2.2 19.2 2.1 19 2C18.7 1.8 18.4 1.7 18.1 1.7C17.8 1.7 17.5 1.8 17.2 2C17 2.1 16.9 2.2 16.8 2.3C16.4 2.7 16.2 3.2 16.2 3.7C16.2 4.9 16 6.1 15.6 7.2C15.5 7.3 15.4 7.4 15.4 7.6C15.4 7.9 15.5 8.1 15.7 8.3L17.9 10.5C15.9 13.6 13.6 15.9 10.8 17.4L13 19.5C13.2 19.7 13.4 19.9 13.7 19.9C14 19.9 14.2 19.8 14.4 19.6L16.6 17.5C16.8 17.3 16.9 17.1 17 16.8C17.1 16.7 17.2 16.6 17.2 16.5C17.6 15.4 17.8 14.2 17.8 13C17.8 12.7 17.8 12.3 17.7 12C18.2 11.9 18.8 11.9 19.3 12C19.4 12.3 19.4 12.7 19.4 13C19.4 16.3 18.1 19.3 16 20.8L13.8 23C13.6 23.2 13.4 23.3 13.1 23.3C12.8 23.3 12.6 23.2 12.4 23L10.2 20.8C8.1 19.3 6.8 16.3 6.8 13C6.8 12.7 6.8 12.3 6.9 12C6.4 11.9 5.8 11.9 5.3 12C5.4 12.3 5.4 12.7 5.4 13C5.4 17.1 7.2 20.7 11 22.8L12.2 25C12.4 25.2 12.6 25.3 12.9 25.3C13.2 25.3 13.4 25.2 13.6 25L15.8 22.8C18.6 20.7 20.4 17.1 20.4 13C20.4 12.7 20.4 12.3 20.3 12C20.7 11.8 21.1 11.7 21.5 11.5C21.6 11.5 21.7 11.5 21.8 11.5C22.1 11.5 22.4 11.5 22.6 11.5C22.8 14.1 23 16.7 23 19.3C23 19.8 22.9 20.3 22.7 20.7C22.6 20.8 22.4 20.9 22.3 21C22 21.2 21.7 21.3 21.4 21.3C21.1 21.3 20.8 21.2 20.5 21C20.4 20.9 20.2 20.8 20.1 20.7C19.9 20.3 19.8 19.8 19.8 19.3C19.8 16.7 20 14.1 20.3 11.5C19.9 11.6 19.5 11.7 19 11.8C18.9 12.1 18.9 12.5 18.9 12.9C18.9 14.3 19 15.7 19 17.1C19 17.6 18.9 18.1 18.7 18.5C18.6 18.6 18.5 18.7 18.3 18.8C17.9 19.1 17.5 19.2 17.1 19.2C16.7 19.2 16.3 19.1 15.9 18.8C15.7 18.7 15.6 18.6 15.5 18.5C15.3 18.1 15.2 17.6 15.2 17.1C15.2 15.7 15.3 14.3 15.3 12.9C15.3 12.5 15.3 12.1 15.2 11.8C14.7 11.7 14.3 11.6 13.9 11.5C13.6 14.1 13.4 16.7 13.4 19.3C13.4 19.8 13.3 20.3 13.1 20.7C13 20.8 12.8 20.9 12.7 21C12.4 21.2 12.1 21.3 11.8 21.3C11.5 21.3 11.2 21.2 10.9 21C10.8 20.9 10.6 20.8 10.5 20.7C10.3 20.3 10.2 19.8 10.2 19.3C10.2 16.7 10.4 14.1 10.7 11.5C10.3 11.6 9.9 11.7 9.4 11.8C9.3 12.1 9.3 12.5 9.3 12.9C9.3 14.3 9.4 15.7 9.4 17.1C9.4 17.6 9.3 18.1 9.1 18.5C9 18.6 8.9 18.7 8.7 18.8C8.3 19.1 7.9 19.2 7.5 19.2C7.1 19.2 6.7 19.1 6.3 18.8C6.1 18.7 6 18.6 5.9 18.5C5.7 18.1 5.6 17.6 5.6 17.1C5.6 15.7 5.7 14.3 5.7 12.9C5.7 12.5 5.7 12.1 5.6 11.8C5.1 11.7 4.7 11.6 4.3 11.5C4 14.1 3.8 16.7 3.8 19.3C3.8 19.8 3.7 20.3 3.5 20.7C3.4 20.8 3.2 20.9 3.1 21C2.8 21.2 2.5 21.3 2.2 21.3C1.9 21.3 1.6 21.2 1.3 21C1.2 20.9 1 20.8 0.9 20.7C0.7 20.3 0.6 19.8 0.6 19.3C0.6 16.7 0.8 14.1 1.1 11.5C1.2 11.5 1.3 11.5 1.4 11.5C1.7 11.5 2 11.5 2.3 11.5C3.3 13.5 4.4 15.3 5.5 16.9C5.6 17 5.7 17.1 5.8 17.2C5.9 17.2 6 17.2 6.1 17.3C6.4 17.4 6.7 17.5 7 17.5C7.3 17.5 7.6 17.4 7.9 17.3C8 17.2 8.1 17.2 8.2 17.2C8.3 17.1 8.4 17 8.5 16.9C9.6 15.3 10.7 13.5 11.7 11.5H12.3C13.3 13.5 14.4 15.3 15.5 16.9C15.6 17 15.7 17.1 15.8 17.2C15.9 17.2 16 17.2 16.1 17.3C16.4 17.4 16.7 17.5 17 17.5C17.3 17.5 17.6 17.4 17.9 17.3C18 17.2 18.1 17.2 18.2 17.2C18.3 17.1 18.4 17 18.5 16.9C19.6 15.3 20.7 13.5 21.7 11.5H22.3C22.6 11.5 22.9 11.5 23.2 11.5C23.3 11.5 23.4 11.5 23.5 11.5C23.8 14.1 24 16.7 24 19.3C24 19.8 23.9 20.3 23.7 20.7C23.6 20.8 23.4 20.9 23.3 21C23 21.2 22.7 21.3 22.4 21.3C22.1 21.3 21.8 21.2 21.5 21C21.4 20.9 21.2 20.8 21.1 20.7C20.9 20.3 20.8 19.8 20.8 19.3C20.8 16.7 21 14.1 21.3 11.5" fill="currentColor"/>
+              </svg>
+              <span>+39 3921502806</span>
+            </div>
+            <div class="company-info-item">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+              </svg>
+              <span>info@idrak-security.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">1.</span> Definitions</h2>
+        <div class="definitions-grid">
+          <div class="definition-item">
+            <h3>Provider</h3>
+            <p>Idrak Security SRL, located at Via Pietro Micca 15, 10122 Turin (TO), Italy, VAT number 12503620010.</p>
+          </div>
+          <div class="definition-item">
+            <h3>User</h3>
+            <p>Any natural or legal person who accesses and uses the website www.idrak-security.com or requests services from the Provider.</p>
+          </div>
+          <div class="definition-item">
+            <h3>Services</h3>
+            <p>All activities, consulting, and professional deliverables provided by the Provider, including cybersecurity, digital forensics, auditing, training, and technical support.</p>
+          </div>
+          <div class="definition-item">
+            <h3>Website</h3>
+            <p>The online portal accessible at www.idrak-security.com, including all content, pages, features, and resources made available to the public.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">2.</span> Acceptance of Terms</h2>
+        <p>By accessing or using the Website and requesting Services from the Provider, the User acknowledges that they have read, understood, and fully accepted these Terms of Service without reservation. The User agrees to comply with all applicable laws and regulations when using the Website and Services.</p>
+        <p>Continued use of the Website or Services constitutes acceptance of any changes to these Terms. If the User does not agree with any part of these Terms, they must immediately cease using the Website and Services.</p>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">3.</span> Scope of Services</h2>
+        <p>The Provider offers, among other things, the following Services:</p>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Penetration Testing & Red Teaming</h3>
+            <p>Intrusion testing and attack simulations to identify vulnerabilities in systems and networks.</p>
+          </div>
+          <div class="service-item">
+            <h3>Security Audits & Compliance</h3>
+            <p>Security audits in accordance with ISO 27001, GDPR, NIS2, PCI DSS and other relevant standards.</p>
+          </div>
+          <div class="service-item">
+            <h3>Digital Forensics & Incident Response</h3>
+            <p>Investigation and evidence preservation for cyber incidents and security breaches.</p>
+          </div>
+          <div class="service-item">
+            <h3>Vulnerability Assessment</h3>
+            <p>In-depth scanning and analysis of networks, systems, and applications to identify security weaknesses.</p>
+          </div>
+          <div class="service-item">
+            <h3>Training & Awareness</h3>
+            <p>Workshops, e-learning modules, and phishing simulations to educate employees on cybersecurity best practices.</p>
+          </div>
+          <div class="service-item">
+            <h3>Risk Strategy Advisory</h3>
+            <p>Guidance on governance, risk posture, and security roadmaps to enhance overall security posture.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">4.</span> Service Delivery and Agreements</h2>
+        <div class="delivery-grid">
+          <div class="delivery-item">
+            <h3>Project-Based Engagements</h3>
+            <p>Scope, timelines, and deliverables are defined in a written proposal or statement of work accepted by the User. All project-based engagements are subject to these Terms unless otherwise specified in a separate agreement.</p>
+          </div>
+          <div class="delivery-item">
+            <h3>Retainer Agreements</h3>
+            <p>Ongoing support, incident response availability, and service levels are governed by a separate signed agreement. Retainer agreements may include specific terms and conditions in addition to these general Terms.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">5.</span> User Obligations</h2>
+        <p>The User agrees to:</p>
+        <ul>
+          <li>Provide the Provider promptly with all information and data necessary for the provision of Services</li>
+          <li>Comply with any technical or organizational instructions provided by the Provider</li>
+          <li>Not reproduce, distribute, modify, or otherwise use Website content without explicit authorization</li>
+          <li>Use the Services only for lawful purposes and in compliance with applicable laws</li>
+          <li>Keep all access credentials confidential and immediately notify of any unauthorized access</li>
+          <li>Cooperate fully with the Provider in the performance of Services</li>
+          <li>Not interfere with or disrupt the integrity or performance of the Website or Services</li>
+          <li>Not attempt to gain unauthorized access to any systems or networks related to the Services</li>
+        </ul>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">6.</span> Fees and Payment</h2>
+        <div class="payment-grid">
+          <div class="payment-item">
+            <h3>Payment Terms</h3>
+            <p>Deposit: 30% of the total Service fee upon acceptance of the proposal. Balance: 70% upon completion of activities and invoicing. Payment terms may vary for retainer agreements and will be specified in the relevant agreement.</p>
+          </div>
+          <div class="payment-item">
+            <h3>Invoicing</h3>
+            <p>Invoices are payable within the terms stated on the invoice unless otherwise agreed in writing. All payments must be made in the currency specified in the invoice.</p>
+          </div>
+        </div>
+        <div class="late-payment-warning">
+          <h3>Late Payment</h3>
+          <p>Late payments may incur interest on arrears equal to the legal interest rate plus 2 percentage points. The Provider reserves the right to suspend Services for non-payment until all outstanding amounts are paid in full.</p>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">7.</span> Intellectual Property</h2>
+        <div class="intellectual-property">
+          <p>All materials, reports, deliverables, software, documentation, and content created or provided by the Provider remain its exclusive property. The Provider retains all intellectual property rights in and to the Services, Website, and any associated materials.</p>
+        </div>
+        <div class="usage-license">
+          <p>The User is granted a non-exclusive, non-transferable license to use deliverables solely for the contracted Services and for the User's internal business purposes. This license does not grant the User any right to sublicense, distribute, or modify the deliverables.</p>
+        </div>
+        <p>Licenses for third-party tools remain with their respective owners and are subject to their terms and conditions. The Provider does not grant any rights to third-party tools beyond what is explicitly permitted by their respective licenses.</p>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">8.</span> Confidentiality</h2>
+        <p>Both parties agree to keep confidential any non-public information exchanged during the performance of the Services, and to use such information solely for the purposes of fulfilling contractual obligations. This obligation of confidentiality shall remain in effect for a period of [X] years following the termination of the engagement.</p>
+        <div class="confidentiality-duration">
+          <p>Confidential information includes, but is not limited to, business plans, technical information, customer data, pricing, and any other information marked as confidential or that reasonably should be understood to be confidential under the circumstances.</p>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">9.</span> Limitation of Liability</h2>
+        <div class="liability-grid">
+          <div class="liability-item">
+            <h3>Limitation</h3>
+            <p>To the maximum extent permitted by applicable law, the Provider shall not be liable for indirect, incidental, or consequential damages arising from the use of the Website or Services, including but not limited to loss of profits, data, or business opportunities.</p>
+          </div>
+          <div class="liability-item">
+            <h3>Total Liability</h3>
+            <p>The Provider’s total liability shall be limited to the amount paid by the User for the specific Service giving rise to the claim. This limitation applies regardless of the form of action, whether in contract, tort, or otherwise.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">10.</span> Force Majeure</h2>
+        <p>The Provider shall not be responsible for delays or failure to perform resulting from events beyond reasonable control, including but not limited to natural disasters, cyber incidents, acts of terrorism, war, labor disputes, regulatory actions, or any other event that prevents the Provider from performing its obligations under these Terms.</p>
+        <p>In the event of a force majeure event, the Provider shall notify the User as soon as reasonably practicable and shall use reasonable efforts to minimize the impact of the event on the performance of Services.</p>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">11.</span> Termination</h2>
+        <div class="termination-early">
+          <h3>Termination for Convenience</h3>
+          <p>Either party may terminate an engagement with written notice, subject to settlement of completed work. The User shall be responsible for payment for all Services rendered up to the date of termination.</p>
+        </div>
+        <div class="termination-early">
+          <h3>Termination for Cause</h3>
+          <p>Either party may terminate an engagement immediately upon written notice if the other party materially breaches these Terms and fails to cure the breach within [X] days of receiving written notice of the breach.</p>
+        </div>
+        <div class="termination-consequences">
+          <h3>Consequences of Termination</h3>
+          <ul>
+            <li>All confidential materials must be returned or destroyed</li>
+            <li>Outstanding fees become due and payable immediately</li>
+            <li>The User's license to use deliverables terminates</li>
+            <li>Neither party shall be relieved of any obligations that accrued prior to termination</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">12.</span> Changes to the Terms</h2>
+        <div class="changes-grid">
+          <div class="changes-item">
+            <h3>Updates</h3>
+            <p>The Provider may update these Terms periodically to reflect legal, regulatory, or operational changes. The most current version of the Terms will always be available on the Website.</p>
+          </div>
+          <div class="changes-item">
+            <h3>Notification</h3>
+            <p>The Provider will notify Users of significant changes to these Terms through the Website or by email. Continued use of the Website or Services after updates constitutes acceptance of the revised Terms.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">13.</span> Governing Law and Jurisdiction</h2>
+        <div class="governing-law-grid">
+          <div class="governing-law-item">
+            <h3>Applicable Law</h3>
+            <p>These Terms of Service are governed by Italian law, without regard to its conflict of law provisions.</p>
+          </div>
+          <div class="governing-law-item">
+            <h3>Jurisdiction</h3>
+            <p>Any dispute arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the Courts of Turin, Italy.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-section">
+        <h2><span class="section-number">14.</span> Final Provisions</h2>
+        <div class="final-provisions">
+          <h3>Entire Agreement</h3>
+          <div class="final-provisions-item">
+            <p>These Terms constitute the entire agreement between the parties with respect to the subject matter hereof and supersede all prior or contemporaneous agreements, representations, and understandings of the parties.</p>
+          </div>
+          <h3>Severability</h3>
+          <div class="final-provisions-item">
+            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue to be valid and enforceable to the fullest extent permitted by law.</p>
+          </div>
+          <h3>Waiver</h3>
+          <div class="final-provisions-item">
+            <p>No waiver of any provision of these Terms shall be deemed a further or continuing waiver of such provision or any other provision, and the Provider's failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legal-contact">
+        <h2>Legal Contact Information</h2>
+        <p>For questions regarding these Terms of Service or for legal matters, you can contact us:</p>
+        <div class="legal-contact-details">
+          <div class="legal-contact-item">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+            </svg>
+            <span>info@idrak-security.com</span>
+          </div>
+          <div class="legal-contact-item">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16.3 14.9 16.2 14.9 16.1 14.9C15.8 14.9 15.6 15 15.4 15.2L13.2 17.4C10.4 15.9 8 13.6 6 10.5L8.2 8.3C8.4 8.1 8.5 7.9 8.5 7.6C8.5 7.4 8.4 7.3 8.3 7.2C7.9 6.1 7.7 4.9 7.7 3.7C7.7 3.2 7.5 2.7 7.3 2.3C7.2 2.2 7 2.1 6.9 2C6.6 1.8 6.3 1.7 6 1.7C5.7 1.7 5.4 1.8 5.1 2C4.9 2.1 4.8 2.2 4.7 2.3C4.3 2.7 4.1 3.2 4.1 3.7C4.1 8.4 6.8 12.9 11 14.8V14.8L11.3 15C11.5 15.2 11.7 15.3 12 15.3C12.3 15.3 12.5 15.2 12.7 15L13 14.8V14.8C17.2 12.9 19.9 8.4 19.9 3.7C19.9 3.2 19.7 2.7 19.5 2.3C19.4 2.2 19.2 2.1 19 2C18.7 1.8 18.4 1.7 18.1 1.7C17.8 1.7 17.5 1.8 17.2 2C17 2.1 16.9 2.2 16.8 2.3C16.4 2.7 16.2 3.2 16.2 3.7C16.2 4.9 16 6.1 15.6 7.2C15.5 7.3 15.4 7.4 15.4 7.6C15.4 7.9 15.5 8.1 15.7 8.3L17.9 10.5C15.9 13.6 13.6 15.9 10.8 17.4L13 19.5C13.2 19.7 13.4 19.9 13.7 19.9C14 19.9 14.2 19.8 14.4 19.6L16.6 17.5C16.8 17.3 16.9 17.1 17 16.8C17.1 16.7 17.2 16.6 17.2 16.5C17.6 15.4 17.8 14.2 17.8 13C17.8 12.7 17.8 12.3 17.7 12C18.2 11.9 18.8 11.9 19.3 12C19.4 12.3 19.4 12.7 19.4 13C19.4 16.3 18.1 19.3 16 20.8L13.8 23C13.6 23.2 13.4 23.3 13.1 23.3C12.8 23.3 12.6 23.2 12.4 23L10.2 20.8C8.1 19.3 6.8 16.3 6.8 13C6.8 12.7 6.8 12.3 6.9 12C6.4 11.9 5.8 11.9 5.3 12C5.4 12.3 5.4 12.7 5.4 13C5.4 17.1 7.2 20.7 11 22.8L12.2 25C12.4 25.2 12.6 25.3 12.9 25.3C13.2 25.3 13.4 25.2 13.6 25L15.8 22.8C18.6 20.7 20.4 17.1 20.4 13C20.4 12.7 20.4 12.3 20.3 12C20.7 11.8 21.1 11.7 21.5 11.5C21.6 11.5 21.7 11.5 21.8 11.5C22.1 11.5 22.4 11.5 22.6 11.5C22.8 14.1 23 16.7 23 19.3C23 19.8 22.9 20.3 22.7 20.7C22.6 20.8 22.4 20.9 22.3 21C22 21.2 21.7 21.3 21.4 21.3C21.1 21.3 20.8 21.2 20.5 21C20.4 20.9 20.2 20.8 20.1 20.7C19.9 20.3 19.8 19.8 19.8 19.3C19.8 16.7 20 14.1 20.3 11.5C19.9 11.6 19.5 11.7 19 11.8C18.9 12.1 18.9 12.5 18.9 12.9C18.9 14.3 19 15.7 19 17.1C19 17.6 18.9 18.1 18.7 18.5C18.6 18.6 18.5 18.7 18.3 18.8C17.9 19.1 17.5 19.2 17.1 19.2C16.7 19.2 16.3 19.1 15.9 18.8C15.7 18.7 15.6 18.6 15.5 18.5C15.3 18.1 15.2 17.6 15.2 17.1C15.2 15.7 15.3 14.3 15.3 12.9C15.3 12.5 15.3 12.1 15.2 11.8C14.7 11.7 14.3 11.6 13.9 11.5C13.6 14.1 13.4 16.7 13.4 19.3C13.4 19.8 13.3 20.3 13.1 20.7C13 20.8 12.8 20.9 12.7 21C12.4 21.2 12.1 21.3 11.8 21.3C11.5 21.3 11.2 21.2 10.9 21C10.8 20.9 10.6 20.8 10.5 20.7C10.3 20.3 10.2 19.8 10.2 19.3C10.2 16.7 10.4 14.1 10.7 11.5C10.3 11.6 9.9 11.7 9.4 11.8C9.3 12.1 9.3 12.5 9.3 12.9C9.3 14.3 9.4 15.7 9.4 17.1C9.4 17.6 9.3 18.1 9.1 18.5C9 18.6 8.9 18.7 8.7 18.8C8.3 19.1 7.9 19.2 7.5 19.2C7.1 19.2 6.7 19.1 6.3 18.8C6.1 18.7 6 18.6 5.9 18.5C5.7 18.1 5.6 17.6 5.6 17.1C5.6 15.7 5.7 14.3 5.7 12.9C5.7 12.5 5.7 12.1 5.6 11.8C5.1 11.7 4.7 11.6 4.3 11.5C4 14.1 3.8 16.7 3.8 19.3C3.8 19.8 3.7 20.3 3.5 20.7C3.4 20.8 3.2 20.9 3.1 21C2.8 21.2 2.5 21.3 2.2 21.3C1.9 21.3 1.6 21.2 1.3 21C1.2 20.9 1 20.8 0.9 20.7C0.7 20.3 0.6 19.8 0.6 19.3C0.6 16.7 0.8 14.1 1.1 11.5C1.2 11.5 1.3 11.5 1.4 11.5C1.7 11.5 2 11.5 2.3 11.5C3.3 13.5 4.4 15.3 5.5 16.9C5.6 17 5.7 17.1 5.8 17.2C5.9 17.2 6 17.2 6.1 17.3C6.4 17.4 6.7 17.5 7 17.5C7.3 17.5 7.6 17.4 7.9 17.3C8 17.2 8.1 17.2 8.2 17.2C8.3 17.1 8.4 17 8.5 16.9C9.6 15.3 10.7 13.5 11.7 11.5H12.3C13.3 13.5 14.4 15.3 15.5 16.9C15.6 17 15.7 17.1 15.8 17.2C15.9 17.2 16 17.2 16.1 17.3C16.4 17.4 16.7 17.5 17 17.5C17.3 17.5 17.6 17.4 17.9 17.3C18 17.2 18.1 17.2 18.2 17.2C18.3 17.1 18.4 17 18.5 16.9C19.6 15.3 20.7 13.5 21.7 11.5H22.3C22.6 11.5 22.9 11.5 23.2 11.5C23.3 11.5 23.4 11.5 23.5 11.5C23.8 14.1 24 16.7 24 19.3C24 19.8 23.9 20.3 23.7 20.7C23.6 20.8 23.4 20.9 23.3 21C23 21.2 22.7 21.3 22.4 21.3C22.1 21.3 21.8 21.2 21.5 21C21.4 20.9 21.2 20.8 21.1 20.7C20.9 20.3 20.8 19.8 20.8 19.3C20.8 16.7 21 14.1 21.3 11.5" fill="currentColor"/>
+            </svg>
+            <span>+39 3921502806</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand"><h4 class="h4">Idrak Security SRL</h4><p>Via Pietro Micca 15, 10122 Torino (TO), Italy</p><p>Tel: +39 3921502806</p><p>Email: <a href="mailto:info@idrak-security.com">info@idrak-security.com</a></p><p>Mon–Fri · 09:00–18:00 CET</p><p>P.IVA 12503620010</p></div>
+        <div class="footer-nav">
+          <div class="footer-nav-column"><h5>Company</h5><a href="about.html">About us</a><a href="client-area.html">Client area</a><a href="contacts.html">Contact</a></div>
+          <div class="footer-nav-column"><h5>Services</h5><a href="services.html">Penetration Testing</a><a href="services.html">Security Audits</a><a href="services.html">Digital Forensics</a></div>
+          <div class="footer-nav-column"><h5>Industries</h5><a href="industries.html">Financial Services</a><a href="industries.html">Energy & Utilities</a><a href="industries.html">Manufacturing</a></div>
+          <div class="footer-nav-column"><h5>Legal</h5><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="terms-of-service.html">Terms of services</a></div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+            <div class="footer-bottom">
+        <div class="footer-tagline">
+          <h2 class="hero-title">Rebuilding<br>Cyber World</h2>
+          <div class="footer-brand-bottom">
+                      <img
+            class="whats-app-image-2026-01-20-at-145511-1-1"
+            src="img/whatsapp-image-2026-01-20-at-14-55-11--1--1.png"
+            alt="WhatsApp Image 2026-01-20 at 14.55.11 (1) 1"
+          />
+              <circle cx="8" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="14" cy="6" r="1.5" fill="#1E293B"/>
+              <circle cx="20" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="26" cy="10" r="1.5" fill="#1E293B"/>
+              <circle cx="32" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="38" cy="6" r="1.5" fill="#1E293B"/>
+              <circle cx="44" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="50" cy="10" r="1.5" fill="#1E293B"/>
+              <circle cx="56" cy="8" r="1.5" fill="#1E293B"/>
+              <circle cx="10" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="16" cy="12" r="1.5" fill="#1E293B"/>
+              <circle cx="22" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="28" cy="16" r="1.5" fill="#1E293B"/>
+              <circle cx="34" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="40" cy="12" r="1.5" fill="#1E293B"/>
+              <circle cx="46" cy="14" r="1.5" fill="#1E293B"/>
+              <circle cx="52" cy="16" r="1.5" fill="#1E293B"/>
+              <circle cx="6" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="12" cy="18" r="1.5" fill="#1E293B"/>
+              <circle cx="18" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="24" cy="22" r="1.5" fill="#1E293B"/>
+              <circle cx="30" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="36" cy="18" r="1.5" fill="#1E293B"/>
+              <circle cx="42" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="48" cy="22" r="1.5" fill="#1E293B"/>
+              <circle cx="54" cy="20" r="1.5" fill="#1E293B"/>
+              <circle cx="8" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="14" cy="24" r="1.5" fill="#1E293B"/>
+              <circle cx="20" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="26" cy="28" r="1.5" fill="#1E293B"/>
+              <circle cx="32" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="38" cy="24" r="1.5" fill="#1E293B"/>
+              <circle cx="44" cy="26" r="1.5" fill="#1E293B"/>
+              <circle cx="50" cy="28" r="1.5" fill="#1E293B"/>
+              <circle cx="10" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="16" cy="30" r="1.5" fill="#1E293B"/>
+              <circle cx="22" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="28" cy="34" r="1.5" fill="#1E293B"/>
+              <circle cx="34" cy="32" r="1.5" fill="#1E293B"/>
+              <circle cx="40" cy="30" r="1.5" fill="#1E293B"/>
+              <circle cx="46" cy="32" r="1.5" fill="#1E293B"/>
+            </svg>
+            <!-- <span class="footer-brand-text">Idrak Security</span> -->
+          </div>
+        </div>
+        <div class="footer-social"><a href="https://linkedin.com/company/idrak-security" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" fill="currentColor"/><rect x="2" y="9" width="4" height="12" fill="currentColor"/><circle cx="4" cy="4" r="2" fill="currentColor"/></svg></a></div>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

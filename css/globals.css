@@ -1,0 +1,1317 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Exo:900,600,500italic,700italic,800,500,700|Inter:400,700,600|Atkinson+Hyperlegible:700,400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6972382b998efbb07523c48f.6972382b998efbb07523c492.5BocjHi.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rectangle-80 {
+  background-color: #dedfe1;
+  height: 798px;
+  left: calc(50.00% - 756px);
+  position: absolute;
+  top: 3980px;
+  width: 1513px;
+}
+
+.frame-338 {
+  background-color: var(--ebony-clay);
+  display: flex;
+  flex-direction: column;
+  height: 1447px;
+  left: 0;
+  position: absolute;
+  top: 1781px;
+  width: 1512px;
+}
+
+.our-cybersecurity-services {
+  align-items: center;
+  align-self: center;
+  color: var(--turquoise-blue);
+  display: flex;
+  font-weight: 800;
+  height: 42px;
+  justify-content: center;
+  line-height: 42px;
+  margin-left: 0;
+  margin-top: 113.4px;
+  text-align: center;
+  width: 614.1px;
+}
+
+.tailored-solutions-t {
+  align-items: center;
+  color: var(--white);
+  display: flex;
+  font-weight: 400;
+  height: 28px;
+  justify-content: center;
+  line-height: 28px;
+  margin-left: 140.5px;
+  margin-top: 10px;
+  text-align: center;
+  width: 1230.98px;
+}
+
+.we-cover-both-offens {
+  align-items: center;
+  align-self: center;
+  color: var(--white);
+  display: flex;
+  font-weight: 400;
+  height: 56px;
+  justify-content: center;
+  line-height: 28px;
+  margin-left: 0;
+  margin-top: 45.5px;
+  text-align: center;
+  width: 1323.88px;
+}
+
+.frame-334 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px 56px;
+  height: 604px;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 73.9px;
+  position: relative;
+  width: 1312px;
+}
+
+.frame-301 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px 31px;
+  position: relative;
+  width: 400px;
+}
+
+.red-teaming-penetration-testing {
+  align-self: stretch;
+  color: var(--turquoise-blue);
+  font-weight: 600;
+  line-height: 36px;
+  position: relative;
+  text-align: center;
+}
+
+.test-the-resilience {
+  color: var(--white);
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 303px;
+}
+
+.frame-302 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 274px;
+  overflow: hidden;
+  padding: 15px 31px;
+  position: relative;
+  width: 400px;
+}
+
+.digital-forensics-incident-response {
+  align-self: stretch;
+  color: var(--turquoise-blue);
+  font-weight: 600;
+  line-height: 36px;
+  position: relative;
+  text-align: center;
+}
+
+.rapidly-investigate {
+  color: var(--white);
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 303px;
+}
+
+.frame-303 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 274px;
+  overflow: hidden;
+  padding: 17px 31px;
+  position: relative;
+  width: 400px;
+}
+
+.vulnerability-assessmen-t {
+  align-self: stretch;
+  color: var(--turquoise-blue);
+  font-weight: 600;
+  line-height: 36px;
+  position: relative;
+  text-align: center;
+}
+
+.proactively-identify {
+  color: var(--white);
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 303px;
+}
+
+.frame-304 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 274px;
+  overflow: hidden;
+  padding: 13px 31px;
+  position: relative;
+  width: 400px;
+}
+
+.security-audits-compliance {
+  align-self: stretch;
+  color: var(--turquoise-blue);
+  font-weight: 600;
+  line-height: 36px;
+  position: relative;
+  text-align: center;
+}
+
+.ensure-organizationa {
+  color: var(--white);
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 303px;
+}
+
+.frame-305 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 274px;
+  overflow: hidden;
+  padding: 19px 31px;
+  position: relative;
+  width: 400px;
+}
+
+.empower-employees-wi {
+  color: var(--white);
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 303px;
+}
+
+.frame-306 {
+  align-items: center;
+  align-self: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 44px;
+  height: 184px;
+  justify-content: center;
+  margin-top: 104.7px;
+  position: relative;
+  width: 1230.98px;
+}
+
+.in-cybersecurity-t {
+  align-items: center;
+  color: var(--white);
+  display: flex;
+  font-weight: 900;
+  justify-content: center;
+  line-height: 56px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 1230.98px;
+}
+
+.contact-us-for-a-tai {
+  align-items: center;
+  align-self: stretch;
+  color: var(--white);
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+}
+
+.light-button-filled-icon {
+  align-items: center;
+  background-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: 48px;
+  justify-content: center;
+  margin-left: 610.5px;
+  margin-top: 56.4px;
+  padding: 8px 24px 8px 8px;
+  position: relative;
+  width: 330px;
+}
+
+.text-twolines-max {
+  color: var(--ebony-clay);
+  font-weight: 600;
+  line-height: 17px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.customized-cybersecu {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-weight: 400;
+  height: 28px;
+  justify-content: center;
+  left: 141px;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 3359px;
+  width: 1231px;
+}
+
+.each-industry-faces {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-weight: 400;
+  height: 84px;
+  justify-content: center;
+  left: calc(50.00% - 437px);
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 3418px;
+  width: 874px;
+}
+
+.industries-served {
+  color: var(--ebony-clay);
+  font-weight: 800;
+  height: 42px;
+  left: calc(50.00% - 307px);
+  line-height: 42px;
+  position: absolute;
+  top: 3307px;
+  width: 614px;
+}
+
+.frame-346 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  left: 100px;
+  position: absolute;
+  top: 3572px;
+  width: 1351px;
+}
+
+.frame-345 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.frame-343 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.es-security {
+  color: var(--ebony-clay);
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 307px;
+}
+
+.frame-34 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--ebony-clay);
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 22px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+.retail-e-commerce-security {
+  color: var(--ebony-clay);
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 327px;
+}
+
+.frame-344 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  position: relative;
+}
+
+.frame-342 {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--ebony-clay);
+  border-radius: 4px;
+  display: flex;
+  gap: 22px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  width: 466.52px;
+}
+
+.public-sector-government-security {
+  color: var(--ebony-clay);
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 350.37px;
+}
+
+.light-button-filled-icon-1 {
+  align-items: center;
+  background-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: 48px;
+  justify-content: center;
+  padding: 8px 24px 8px 8px;
+  position: relative;
+  width: 330px;
+}
+
+.text-twolines-max-1 {
+  color: var(--ebony-clay);
+  font-weight: 600;
+  line-height: 17px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-our-company {
+  align-items: center;
+  color: var(--ebony-clay);
+  display: flex;
+  font-weight: 800;
+  height: 42px;
+  justify-content: center;
+  left: calc(50.00% - 594px);
+  line-height: 42px;
+  position: absolute;
+  top: 1466px;
+  width: 614px;
+}
+
+.global_network_7-1 {
+  aspect-ratio: 1.72;
+  height: 671px;
+  left: 678px;
+  object-fit: cover;
+  position: absolute;
+  top: 108px;
+  width: 834px;
+}
+
+.protect-your-busines {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-weight: 900;
+  height: 330px;
+  justify-content: center;
+  left: 210px;
+  line-height: 66px;
+  position: absolute;
+  top: 198px;
+  width: 614px;
+}
+
+.we-deliver-end-to-en {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-weight: 400;
+  height: 112px;
+  justify-content: center;
+  line-height: 28px;
+  margin-top: 0;
+  width: 712.19px;
+}
+
+.span-1 {
+  letter-spacing: 0;
+}
+
+.comprehensive-servic {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-weight: 400;
+  height: 56px;
+  justify-content: center;
+  line-height: 28px;
+  width: 503.71px;
+}
+
+.group-14 {
+  display: flex;
+  height: 56px;
+  left: 162px;
+  position: absolute;
+  top: 1549px;
+  width: 506px;
+}
+
+.group-15 {
+  display: flex;
+  height: 140px;
+  left: 779px;
+  position: absolute;
+  top: 1468px;
+  width: 506px;
+}
+
+.founded-by-industry {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-weight: 400;
+  height: 140px;
+  justify-content: center;
+  line-height: 28px;
+  width: 503.71px;
+}
+
+.cyber-security-1 {
+  height: 426px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 834px;
+  width: 517px;
+}
+
+.dark-button-filled {
+  align-items: center;
+  background-color: var(--turquoise-blue);
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: 48px;
+  justify-content: center;
+  left: 210px;
+  overflow: hidden;
+  padding: 14px 24px;
+  position: absolute;
+  top: 716px;
+  width: 136px;
+}
+
+.text-two-lines-max {
+  align-items: center;
+  color: var(--ebony-clay);
+  display: flex;
+  flex: 1;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 17px;
+  position: relative;
+  text-align: center;
+}
+
+.rectangle-15 {
+  background-color: var(--cape-cod);
+  height: 1px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.rectangle-78 {
+  border: 1px solid;
+  border-color: var(--cape-cod);
+  height: 337px;
+  left: 102px;
+  position: absolute;
+  top: 1365px;
+  width: 1313px;
+}
+
+.frame-347 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 87px;
+  left: calc(50.00% - 656px);
+  position: absolute;
+  top: 4063px;
+  width: 1312px;
+}
+
+.frequently-asked-questions {
+  align-items: center;
+  align-self: stretch;
+  color: var(--black);
+  display: flex;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 42px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.frame-309 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  height: 525px;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.frame-4248 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 581px;
+}
+
+.frame-42483 {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 581px;
+}
+
+.frame-42478 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 535px;
+}
+
+.what-happens-if-you {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.we-immediately-issue {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+.light-button-outlined-badge {
+  border: 2px solid;
+  border-radius: 8px;
+  display: flex;
+  height: 32px;
+  padding: 8px;
+  width: 32px;
+}
+
+.how-can-we-get-start {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.getting-started-is-e {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+.do-you-offer-post-incident-support {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.we-immediately-issue-1 {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+.are-your-services-gdpr-compliant {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.all-services-are-des {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+.line-2 {
+  height: 525.12px;
+  margin-bottom: -0.12px;
+  object-fit: cover;
+  position: relative;
+  width: 1px;
+}
+
+.what-are-the-typical {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.deliverables-typical {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+.what-is-penetration {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.how-often-should-we {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.we-recommend-conduct {
+  align-self: stretch;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+}
+
+.frame-300 {
+  align-items: center;
+  display: flex;
+  height: 63px;
+  justify-content: space-between;
+  position: relative;
+  width: 1440px;
+}
+
+.whats-app-image-2026-01-20-at-145511-1-1 {
+  aspect-ratio: 8.79;
+  height: 45.48px;
+  object-fit: cover;
+  position: relative;
+  width: 399.8px;
+}
+
+.frame-42392 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 19px;
+  position: relative;
+}
+
+.frame-42385 {
+  align-items: center;
+  background-color: var(--mint-tulip);
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.place {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-423 {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.about-us {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.services {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-42393 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 129px;
+}
+
+.eng {
+  color: var(--ebony-clay);
+  font-weight: 600;
+  line-height: 17px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.light-button-f-illed-badge {
+  align-items: center;
+  background-color: var(--turquoise-blue);
+  border-radius: 5.33px;
+  display: flex;
+  gap: 6.67px;
+  height: 32px;
+  justify-content: center;
+  padding: 5.33px;
+  position: relative;
+  width: 32px;
+}
+
+.system-icons-3 {
+  height: 21.33px;
+  position: relative;
+  width: 21.33px;
+}
+
+.rebuilding-cyber-world {
+  color: var(--black);
+  font-weight: 900;
+  left: 96px;
+  line-height: 66px;
+  position: absolute;
+  top: 463px;
+  width: 464px;
+}
+
+.group-12 {
+  display: flex;
+  flex-direction: column;
+  height: 264px;
+  left: 96px;
+  position: absolute;
+  top: 71px;
+  width: 622px;
+}
+
+.idrak-security-srl {
+  color: var(--black);
+  font-weight: 600;
+  height: 30.55px;
+  line-height: 30px;
+  white-space: nowrap;
+  width: 596.84px;
+}
+
+.group-12-item {
+  color: var(--black);
+  font-weight: 400;
+  height: 22.41px;
+  line-height: 22px;
+  margin-top: 11.2px;
+  white-space: nowrap;
+  width: 608px;
+}
+
+.span1 {
+  text-decoration: underline;
+}
+
+.frame-310 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 96px;
+  position: absolute;
+  top: 658px;
+  width: 1312px;
+}
+
+.social-icons {
+  /* background-image: url(../img/vector-9.svg); */
+  background-size: 100% 100%;
+  height: 22.36px;
+  position: relative;
+  width: 24px;
+}
+
+.objects-2 {
+  height: 682px;
+  left: 0;
+  position: absolute;
+  top: 53px;
+  width: 398px;
+}
+
+.objects-3 {
+  height: 682px;
+  left: 1020px;
+  position: absolute;
+  top: 53px;
+  width: 492px;
+}
+
+.frame-42475 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 7px;
+  left: 718px;
+  position: absolute;
+  top: 53px;
+}
+
+.frame-42471 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 107px;
+}
+
+.company {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-us-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.client-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-42472 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 194px;
+}
+
+.services-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.penetration-testing-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.security-audits {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.digital-forensics {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.vulnerability-assessment {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.training-awareness-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-42473 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 222px;
+}
+
+.financial-services {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.energy-utilities {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.manufacturing-industry-40 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.public-sector {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.retail-e-commerce {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-42474 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 154.11px;
+}
+
+.frame-42388 {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.privacy-policy {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 114.11px;
+}
+
+.cookie-policy {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.terms-of-services {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.industries-2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.light-button-outlined {
+  align-items: center;
+  border-color: var(--ebony-clay);
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.place-4 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame-42387 {
+  align-items: center;
+  background-color: var(--mint-tulip);
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+}

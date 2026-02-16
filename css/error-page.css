@@ -1,0 +1,755 @@
+/* screen - error-page */
+
+.error-page {
+  background-color: var(--white);
+  height: 1911px;
+  overflow: hidden;
+  position: relative;
+  width: 1512px;
+}
+
+.error-page .objects {
+  height: 1143px;
+  left: 834px;
+  position: absolute;
+  top: 106px;
+  width: 678px;
+}
+
+.error-page .objects-1 {
+  height: 1143px;
+  left: 0;
+  position: absolute;
+  top: 106px;
+  width: 560px;
+}
+
+.error-page .objects_copia {
+  height: 427px;
+  left: calc(50.00% - 289px);
+  position: absolute;
+  top: 370px;
+  width: 581px;
+}
+
+.error-page .group {
+  height: 161px;
+  left: calc(50.00% - 196px);
+  position: absolute;
+  top: 173px;
+  width: 378px;
+}
+
+.error-page .vector-9 {
+  height: 156px;
+  left: calc(50.00% - 189px);
+  position: absolute;
+  top: 2px;
+  width: 121px;
+}
+
+.error-page .vector-10 {
+  height: 161px;
+  left: calc(50.00% - 57px);
+  position: absolute;
+  top: 0;
+  width: 113px;
+}
+
+.error-page .vector-11 {
+  height: 156px;
+  left: calc(50.00% + 68px);
+  position: absolute;
+  top: 2px;
+  width: 121px;
+}
+
+.error-page .group-1 {
+  height: 35px;
+  left: calc(50.00% - 290px);
+  position: absolute;
+  top: 171px;
+  width: 145px;
+}
+
+.error-page .vector-12 {
+  height: 3px;
+  left: calc(50.00% - 44px);
+  position: absolute;
+  top: 33px;
+  width: 66px;
+}
+
+.error-page .vector-13 {
+  height: 3px;
+  left: calc(50.00% + 34px);
+  position: absolute;
+  top: 33px;
+  width: 16px;
+}
+
+.error-page .vector-14 {
+  height: 3px;
+  left: calc(50.00% - 55px);
+  position: absolute;
+  top: 15px;
+  width: 116px;
+}
+
+.error-page .vector-15 {
+  height: 3px;
+  left: calc(50.00% - 74px);
+  position: absolute;
+  top: 15px;
+  width: 12px;
+}
+
+.error-page .vector-16 {
+  height: 3px;
+  left: calc(50.00% - 55px);
+  position: absolute;
+  top: -1px;
+  width: 40px;
+}
+
+.error-page .vector-17 {
+  height: 3px;
+  left: calc(50.00% - 8px);
+  position: absolute;
+  top: -1px;
+  width: 82px;
+}
+
+.error-page .group-2 {
+  height: 35px;
+  left: calc(50.00% + 186px);
+  position: absolute;
+  top: 312px;
+  width: 102px;
+}
+
+.error-page .vector-18 {
+  height: 3px;
+  left: calc(50.00% - 52px);
+  position: absolute;
+  top: 33px;
+  width: 70px;
+}
+
+.error-page .vector-19 {
+  height: 3px;
+  left: calc(50.00% + 26px);
+  position: absolute;
+  top: 33px;
+  width: 13px;
+}
+
+.error-page .vector-20 {
+  height: 3px;
+  left: calc(50.00% - 39px);
+  position: absolute;
+  top: 15px;
+  width: 91px;
+}
+
+.error-page .vector-21 {
+  height: 3px;
+  left: calc(50.00% - 52px);
+  position: absolute;
+  top: 15px;
+  width: 10px;
+}
+
+.error-page .vector-22 {
+  height: 3px;
+  left: calc(50.00% - 52px);
+  position: absolute;
+  top: -1px;
+  width: 44px;
+}
+
+.error-page .vector-23 {
+  height: 3px;
+  left: calc(50.00% - 4px);
+  position: absolute;
+  top: -1px;
+  width: 33px;
+}
+
+.error-page .group-3 {
+  height: 161px;
+  left: calc(50.00% - 190px);
+  position: absolute;
+  top: 168px;
+  width: 378px;
+}
+
+.error-page .vector-24 {
+  height: 161px;
+  left: calc(50.00% - 191px);
+  position: absolute;
+  top: 1px;
+  width: 126px;
+}
+
+.error-page .vector-25 {
+  height: 165px;
+  left: calc(50.00% - 59px);
+  position: absolute;
+  top: -2px;
+  width: 117px;
+}
+
+.error-page .vector-26 {
+  height: 161px;
+  left: calc(50.00% + 66px);
+  position: absolute;
+  top: 1px;
+  width: 126px;
+}
+
+.error-page .error {
+  -webkit-text-stroke: 1.31px var(--ebony-clay);
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: 48.8px;
+  font-weight: 400;
+  left: calc(50.00% - 84px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 347px;
+}
+
+.error-page .group-4 {
+  height: 58px;
+  left: calc(50.00% + 187px);
+  position: absolute;
+  top: 187px;
+  width: 58px;
+}
+
+.error-page .vector-27 {
+  height: 17px;
+  left: calc(50.00% - 1px);
+  position: absolute;
+  top: -1px;
+  width: 3px;
+}
+
+.error-page .vector-28 {
+  height: 13px;
+  left: calc(50.00% - 22px);
+  position: absolute;
+  top: 7px;
+  width: 13px;
+}
+
+.error-page .vector-29 {
+  height: 3px;
+  left: calc(50.00% - 30px);
+  position: absolute;
+  top: 27px;
+  width: 17px;
+}
+
+.error-page .vector-30 {
+  height: 13px;
+  left: calc(50.00% - 22px);
+  position: absolute;
+  top: 37px;
+  width: 13px;
+}
+
+.error-page .vector-31 {
+  height: 17px;
+  left: calc(50.00% - 1px);
+  position: absolute;
+  top: 42px;
+  width: 3px;
+}
+
+.error-page .vector-32 {
+  height: 13px;
+  left: calc(50.00% + 9px);
+  position: absolute;
+  top: 37px;
+  width: 13px;
+}
+
+.error-page .vector-33 {
+  height: 3px;
+  left: calc(50.00% + 13px);
+  position: absolute;
+  top: 27px;
+  width: 17px;
+}
+
+.error-page .vector-34 {
+  height: 13px;
+  left: calc(50.00% + 9px);
+  position: absolute;
+  top: 7px;
+  width: 13px;
+}
+
+.error-page .group-5 {
+  height: 42px;
+  left: calc(50.00% - 260px);
+  position: absolute;
+  top: 264px;
+  width: 42px;
+}
+
+.error-page .vector {
+  height: 13px;
+  left: calc(50.00% - 1px);
+  position: absolute;
+  top: -1px;
+  width: 3px;
+}
+
+.error-page .vector-1 {
+  height: 10px;
+  left: calc(50.00% - 16px);
+  position: absolute;
+  top: 5px;
+  width: 10px;
+}
+
+.error-page .vector-2 {
+  height: 3px;
+  left: calc(50.00% - 22px);
+  position: absolute;
+  top: 19px;
+  width: 13px;
+}
+
+.error-page .vector-3 {
+  height: 10px;
+  left: calc(50.00% - 16px);
+  position: absolute;
+  top: 27px;
+  width: 10px;
+}
+
+.error-page .vector-4 {
+  height: 13px;
+  left: calc(50.00% - 1px);
+  position: absolute;
+  top: 30px;
+  width: 3px;
+}
+
+.error-page .vector-5 {
+  height: 10px;
+  left: calc(50.00% + 6px);
+  position: absolute;
+  top: 27px;
+  width: 10px;
+}
+
+.error-page .vector-6 {
+  height: 3px;
+  left: calc(50.00% + 9px);
+  position: absolute;
+  top: 19px;
+  width: 13px;
+}
+
+.error-page .vector-7 {
+  height: 10px;
+  left: calc(50.00% + 6px);
+  position: absolute;
+  top: 5px;
+  width: 10px;
+}
+
+.error-page .group-6 {
+  height: 42px;
+  left: calc(50.00% + 24px);
+  position: absolute;
+  top: 47px;
+  width: 42px;
+}
+
+.error-page .vector-35 {
+  height: 60px;
+  left: calc(50.00% - 188px);
+  position: absolute;
+  top: 347px;
+  width: 363px;
+}
+
+.error-page .vector-36 {
+  height: 104px;
+  left: calc(50.00% - 160px);
+  position: absolute;
+  top: 99px;
+  width: 238px;
+}
+
+.error-page .vector-37 {
+  height: 85px;
+  left: calc(50.00% - 8px);
+  position: absolute;
+  top: 67px;
+  width: 159px;
+}
+
+.error-page .vector-38 {
+  height: 14px;
+  left: calc(50.00% - 166px);
+  position: absolute;
+  top: 144px;
+  width: 14px;
+}
+
+.error-page .vector-39 {
+  height: 14px;
+  left: calc(50.00% - 13px);
+  position: absolute;
+  top: 55px;
+  width: 14px;
+}
+
+.error-page .vector-40 {
+  height: 14px;
+  left: calc(50.00% + 143px);
+  position: absolute;
+  top: 150px;
+  width: 14px;
+}
+
+.error-page .vector-41 {
+  height: 14px;
+  left: calc(50.00% + 70px);
+  position: absolute;
+  top: 201px;
+  width: 14px;
+}
+
+.error-page .group-7 {
+  height: 13px;
+  left: calc(50.00% - 209px);
+  position: absolute;
+  top: 320px;
+  width: 13px;
+}
+
+.error-page .vector-8 {
+  height: 16px;
+  left: calc(50.00% - 8px);
+  position: absolute;
+  top: -1px;
+  width: 16px;
+}
+
+.error-page .group-8 {
+  height: 13px;
+  left: calc(50.00% - 202px);
+  position: absolute;
+  top: 127px;
+  width: 13px;
+}
+
+.error-page .group-9 {
+  height: 13px;
+  left: calc(50.00% + 230px);
+  position: absolute;
+  top: 278px;
+  width: 13px;
+}
+
+.error-page .vector-42 {
+  height: 50px;
+  left: calc(50.00% - 210px);
+  position: absolute;
+  top: 38px;
+  width: 94px;
+}
+
+.error-page .vector-43 {
+  height: 37px;
+  left: calc(50.00% + 173px);
+  position: absolute;
+  top: 129px;
+  width: 69px;
+}
+
+.error-page .vector-44 {
+  height: 31px;
+  left: calc(50.00% + 203px);
+  position: absolute;
+  top: 369px;
+  width: 58px;
+}
+
+.error-page .vector-45 {
+  height: 37px;
+  left: calc(50.00% - 276px);
+  position: absolute;
+  top: 345px;
+  width: 69px;
+}
+
+.error-page .vector-46 {
+  height: 123px;
+  left: calc(50.00% - 119px);
+  position: absolute;
+  top: -1px;
+  width: 326px;
+}
+
+.error-page .vector-47 {
+  height: 99px;
+  left: calc(50.00% - 270px);
+  position: absolute;
+  top: 229px;
+  width: 34px;
+}
+
+.error-page .vector-48 {
+  height: 20px;
+  left: calc(50.00% + 149px);
+  position: absolute;
+  top: 409px;
+  width: 79px;
+}
+
+.error-page .vector-49 {
+  height: 36px;
+  left: calc(50.00% - 102px);
+  position: absolute;
+  top: 122px;
+  width: 3px;
+}
+
+.error-page .vector-50 {
+  height: 19px;
+  left: calc(50.00% - 110px);
+  position: absolute;
+  top: 139px;
+  width: 3px;
+}
+
+.error-page .vector-51 {
+  height: 27px;
+  left: calc(50.00% + 20px);
+  position: absolute;
+  top: 139px;
+  width: 3px;
+}
+
+.error-page .vector-52 {
+  height: 13px;
+  left: calc(50.00% + 11px);
+  position: absolute;
+  top: 151px;
+  width: 3px;
+}
+
+.error-page .vector-53 {
+  height: 20px;
+  left: calc(50.00% + 3px);
+  position: absolute;
+  top: 144px;
+  width: 3px;
+}
+
+.error-page .vector-54 {
+  height: 19px;
+  left: calc(50.00% - 94px);
+  position: absolute;
+  top: 139px;
+  width: 3px;
+}
+
+.error-page .vector-55 {
+  height: 10px;
+  left: calc(50.00% + 126px);
+  position: absolute;
+  top: 153px;
+  width: 3px;
+}
+
+.error-page .vector-56 {
+  height: 21px;
+  left: calc(50.00% + 118px);
+  position: absolute;
+  top: 142px;
+  width: 3px;
+}
+
+.error-page .vector-57 {
+  height: 16px;
+  left: calc(50.00% + 134px);
+  position: absolute;
+  top: 147px;
+  width: 3px;
+}
+
+.error-page .oops-the-page-your {
+  -webkit-text-stroke: 1.58px var(--ebony-clay);
+  color: var(--black);
+  font-weight: 800;
+  left: calc(50.00% - 470px);
+  line-height: 42px;
+  position: absolute;
+  top: 254px;
+  white-space: nowrap;
+  width: 941px;
+}
+
+.error-page .we-cant-find-the-pa {
+  -webkit-text-stroke: 1.58px var(--ebony-clay);
+  color: var(--black);
+  font-weight: 400;
+  left: calc(50.00% - 298px);
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 881px;
+  width: 596px;
+}
+
+.error-page .header {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  left: 0;
+  padding: 20px 0px;
+  position: absolute;
+  top: 1px;
+  width: 1512px;
+}
+
+.error-page .industries {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.error-page .light-button-outlined-icon {
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--ebony-clay);
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 4px 8px;
+  position: relative;
+}
+
+.error-page .system-icons {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.error-page .system-icons-1 {
+  height: 21.33px;
+  position: relative;
+  width: 21.33px;
+}
+
+.error-page .line-1 {
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+}
+
+.error-page .frame-336 {
+  background-color: var(--turquoise-blue);
+  bottom: 0;
+  height: 735px;
+  left: calc(50.00% - 756px);
+  position: absolute;
+  width: 1512px;
+}
+
+.error-page .via-pietro-micca-15 {
+  color: var(--black);
+  font-weight: 400;
+  height: 22.41px;
+  line-height: 22px;
+  margin-top: 42.8px;
+  white-space: nowrap;
+  width: 608px;
+}
+
+.error-page .line-8 {
+  left: calc(50.00% - 660px);
+  position: absolute;
+  top: 426px;
+  width: 1320px;
+}
+
+.error-page .frame-4238 {
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.error-page .penetration-testing {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.error-page .training-awareness {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.error-page .industries-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.error-page .line {
+  height: 1px;
+  object-fit: cover;
+}
