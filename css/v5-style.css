@@ -253,6 +253,7 @@ ul, ol {
   top: 0;
   z-index: 1000;
   background: var(--white);
+  width: 100%;
 }
 
 .header-line {
@@ -332,7 +333,8 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 129px;
+  gap: 12px;
+  width: auto;
 }
 
 .lang-selector {
@@ -350,6 +352,25 @@ ul, ol {
 .lang-selector svg {
   width: 24px;
   height: 24px;
+}
+
+.gtranslate_wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.gtranslate_wrapper .gt_float_switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border: 1px solid var(--dark-blue);
+  border-radius: 4px;
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-blue);
 }
 
 .user-icon {

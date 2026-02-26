@@ -10,6 +10,23 @@
   text-decoration: none;
 }
 
+.screen .group-12 a.span1 {
+  display: inline;
+  text-decoration: underline;
+}
+
+.screen a.dark-button-filled,
+.screen a.light-button-filled-icon,
+.screen a.light-button-filled-icon-1 {
+  display: flex;
+  text-decoration: none;
+}
+
+.screen .gtranslate_wrapper a {
+  display: inline-flex;
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -532,9 +549,9 @@
 .group-14 {
   display: flex;
   height: 56px;
-  left: 162px;
+  left: 779px;
   position: absolute;
-  top: 1549px;
+  top: 1570px;
   width: 506px;
 }
 
@@ -543,7 +560,7 @@
   height: 140px;
   left: 779px;
   position: absolute;
-  top: 1468px;
+  top: 1430px;
   width: 506px;
 }
 
@@ -945,6 +962,7 @@
   position: absolute;
   top: 71px;
   width: 622px;
+  z-index: 2;
 }
 
 .idrak-security-srl {
@@ -970,6 +988,11 @@
   text-decoration: underline;
 }
 
+.group-12 a,
+.group-12 a:visited {
+  color: inherit;
+}
+
 .frame-310 {
   align-items: center;
   display: flex;
@@ -978,6 +1001,7 @@
   position: absolute;
   top: 658px;
   width: 1312px;
+  z-index: 2;
 }
 
 .social-icons {
@@ -994,6 +1018,7 @@
   position: absolute;
   top: 53px;
   width: 398px;
+  pointer-events: none;
 }
 
 .objects-3 {
@@ -1002,6 +1027,7 @@
   position: absolute;
   top: 53px;
   width: 492px;
+  pointer-events: none;
 }
 
 .frame-42475 {
@@ -1011,6 +1037,7 @@
   left: 718px;
   position: absolute;
   top: 53px;
+  z-index: 2;
 }
 
 .frame-42471 {

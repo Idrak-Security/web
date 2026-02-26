@@ -3,6 +3,7 @@
 .homepage {
   background-color: var(--white);
   height: 5502px;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
   width: 1512px;
@@ -308,7 +309,8 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: 129px;
+  gap: 12px;
+  width: auto;
 }
 
 .homepage .lang-selector {
@@ -329,6 +331,25 @@
 .homepage .lang-selector svg {
   width: 24px;
   height: 24px;
+}
+
+.homepage .gtranslate_wrapper {
+  align-items: center;
+  display: inline-flex;
+}
+
+.homepage .gtranslate_wrapper .gt_float_switcher {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--ebony-clay);
+  border-radius: 4px;
+  color: var(--ebony-clay);
+  display: inline-flex;
+  font-family: var(--font-family-inter);
+  font-size: 14px;
+  font-weight: 600;
+  gap: 8px;
+  padding: 4px 8px;
 }
 
 .homepage .user-icon {
@@ -371,4 +392,24 @@
   height: 2px;
   background-color: var(--ebony-clay);
   border-radius: 2px;
+}
+
+/* LinkedIn button (match inner pages) */
+.homepage .social-icons {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ebony-clay);
+  border-radius: 8px;
+  color: var(--white);
+}
+.homepage .social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
+}
+.homepage .social-icons:visited {
+  color: var(--white);
 }
