@@ -872,7 +872,27 @@
     </div>
   </footer>
 <script>
-  window.gtranslateSettings = {"default_language":"it","languages":["it","en","fr","de","es","zh-CN"],"wrapper_selector":".gtranslate_wrapper","flag_size":24};
+  window.gtranslateSettings = {"default_language":"en","languages":["en","it","fr","de","es","zh-CN"],"wrapper_selector":".gtranslate_wrapper","flag_size":24};
+  // Force reload when switching back to English
+  function checkLanguage() {
+    var interval = setInterval(function() {
+      if (document.querySelector('.gtranslate_wrapper select')) {
+        clearInterval(interval);
+        var select = document.querySelector('.gtranslate_wrapper select');
+        select.addEventListener('change', function() {
+          if (this.value === 'en') {
+            setTimeout(function() {
+              // Clear GTranslate cookies
+              document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+              document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + document.domain;
+              window.location.reload();
+            }, 500);
+          }
+        });
+      }
+    }, 100);
+  }
+  checkLanguage();
 </script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 <script src="js/main.js"></script>
